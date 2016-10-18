@@ -1,0 +1,142 @@
+﻿<#@ Assembly Name="System.Core" #>
+<#@ Assembly Name="System.Windows.Forms" #>
+<#@ import namespace="System" #>
+<#@ import namespace="System.IO" #>
+<#@ import namespace="System.Diagnostics" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Collections" #>
+<#@ import namespace="System.Collections.Generic" #> 
+<#@ import namespace="System.Runtime.Remoting.Messaging" #>
+<#@ IntelliSenseLanguage processor="tangibleT4Editor" language="C#" #>
+<#+ 
+
+  void GenerateDebutDTO(string pNomObject,string pNomTable){			
+		#>
+using WS_Hotline.Framework.Domain.Command;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Linq;
+using System.Runtime.Serialization;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace WS_Hotline.DTOLibrary.Entities.<#= pNomObject #>
+{
+
+	/// <summary>
+    /// Classe DTO permettant de gérer <#= pNomObject #>
+    /// </summary>
+    /// <remark><#= Environment.UserName #> - <#= DateTime.Now.ToShortDateString() #> - Généré par Template T4 v1.0</remark>
+    [DataContract]
+    [Table("<#= pNomTable #>")]
+    public class <#= pNomObject #>DTO : BaseDTO
+    {
+		#region Property
+		<#+
+	}	
+  
+
+  void GeneratepPropertyDTO(ChampDTO pChamp){		
+	  	#>
+		
+		private <#= pChamp.Type #><#= pChamp.Type!="string" && pChamp.IsNullable?"?":""#> _<#= pChamp.Nom #>;
+        /// <summary>
+        /// <#= pChamp.Commentaire #>
+        /// </summary>
+        /// <remarks><#= Environment.UserName #> - <#= DateTime.Now.ToShortDateString() #> - Généré par Template T4 v1.0</remarks>
+        [DataMember]
+        [<#= pChamp.IsKey?"Key,":""#>Column("<#= pChamp.NomColumn #>")]<#= pChamp.Type=="string"?"\r\n\t\t[MaxLength("+ pChamp.Maxlength +")]":""#> <#= pChamp.IsNullable?"":"\r\n\t\t[Required(ErrorMessage = \"" + pChamp.Nom + " error\")]" #>
+        public <#= pChamp.Type #><#= pChamp.Type!="string" && pChamp.IsNullable?"?":""#> <#= pChamp.Nom #>
+        {
+            get { return _<#= pChamp.Nom #>; }
+            set
+            {
+                _<#= pChamp.Nom #> = value; 
+				ValidateProperty(value, new ValidationContext(this, null, null) { MemberName = "<#= pChamp.Nom #>" });
+            }
+        }
+		<#+
+  }
+
+  void GenerateLiaisonDTO(ObservableCollection<LiaisonDTO> pListLiaisonSimple, ObservableCollection<LiaisonDTO> pListLiaisonMultiple)
+  {
+	  #>
+  
+		#endregion
+	
+		#region Liaison
+		<#+ 
+
+	  foreach(LiaisonDTO lElement in pListLiaisonSimple)
+      {
+		  GeneratepPropertyLiaisonSimpleDTO(lElement);
+      }
+
+	  foreach(LiaisonDTO lElement in pListLiaisonMultiple)
+      {
+		  GeneratepPropertyLiaisonMultipleDTO(lElement);
+      }
+
+
+  }
+
+
+
+  void GeneratepPropertyLiaisonSimpleDTO(LiaisonDTO pLiaison){		
+	  	#>
+		
+		private <#= pLiaison.Object #>.<#= pLiaison.Object #>DTO _<#= pLiaison.Nom #>;
+        /// <summary>
+        /// Liens vers <#= pLiaison.Object #>
+        /// </summary>
+        /// <remarks><#= Environment.UserName #> - <#= DateTime.Now.ToShortDateString() #> - Généré par Template T4 v1.0</remarks>
+        [ForeignKey("<#= pLiaison.Champ #>")]
+		[DataMember]
+        public <#= pLiaison.Object #>.<#= pLiaison.Object #>DTO <#= pLiaison.Nom #>
+        {
+            get { return _<#= pLiaison.Nom #>; }
+            set
+            {
+                _<#= pLiaison.Nom #> = value;
+            }
+        }
+		<#+
+  }
+
+
+  
+  void GeneratepPropertyLiaisonMultipleDTO(LiaisonDTO pLiaison){		
+	  	#>
+		
+		private ICollection<<#= pLiaison.Object #>.<#= pLiaison.Object #>DTO> _List<#= pLiaison.Nom #>;
+		/// <summary>
+		/// Liste de <#= pLiaison.Object #>
+		/// </summary>
+		/// <remarks><#= Environment.UserName #> - <#= DateTime.Now.ToShortDateString() #> - Généré par Template T4 v1.0</remarks>
+		[InverseProperty("<#= pLiaison.Champ #>")]
+		[DataMember]
+		public ICollection<<#= pLiaison.Object #>.<#= pLiaison.Object #>DTO> List<#= pLiaison.Nom #>
+		{
+			get { return _List<#= pLiaison.Nom #>; }
+			set
+			{
+				_List<#= pLiaison.Nom #> = value;
+			}
+		}
+
+		<#+
+  }
+
+
+
+    void GenerateFinDTO(){			
+		#>
+	
+		#endregion
+    }
+}
+		<#+
+	}	
+#>

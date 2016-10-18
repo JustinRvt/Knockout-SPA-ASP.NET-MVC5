@@ -1,0 +1,108 @@
+﻿<#@ IntelliSenseLanguage processor="tangibleT4Editor" language="C#" #>
+<#+ 
+
+  void GenerateDebutCritereDTO(string pNomObject){			
+		#>
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.Serialization;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace WS_Hotline.DTOLibrary.Entities.<#= pNomObject #>
+{
+    /// <summary>
+    /// Classe de critère pour <#= pNomObject #>DTO
+    /// </summary>
+    /// <remarks><#= Environment.UserName #> - <#= DateTime.Now.ToShortDateString() #> - Généré par Template T4 v1.0 </remarks>
+    public class Critere<#= pNomObject #>DTO : CritereBaseDTO<<#= pNomObject #>DTO>
+    {
+        #region Property
+		<#+
+	}	
+
+    void GeneratePropertyCritereDTO(ChampDTO pChamp){
+		var lSuffix = pChamp.ValueSearch.Contains(">=")?"SuperieurA": pChamp.ValueSearch.Contains("<=")?"InferieurA":"";
+		
+	  	#>
+
+		private <#= pChamp.Type #><#= pChamp.Type!="string" && pChamp.IsNullable?"?":""#> _<#= lSuffix #><#= pChamp.Nom #>;
+        /// <summary>
+        /// Filtre sur <#= pChamp.Nom #>
+        /// </summary>
+        /// <remarks><#= Environment.UserName #> - <#= DateTime.Now.ToShortDateString() #> - Généré par Template T4 v1.0</remarks>
+        [DataMember]
+        public <#= pChamp.Type #><#= pChamp.Type!="string" && pChamp.IsNullable?"?":""#> <#= lSuffix #><#= pChamp.Nom #>
+        {
+            get { return _<#= lSuffix #><#= pChamp.Nom #>; }
+            set
+            {
+                _<#= lSuffix #><#= pChamp.Nom #> = value;
+                // <#= Environment.UserName.Substring(0,2) #> - Mise en place du filtre
+                <#= pChamp.Type!="string" && pChamp.IsNullable?"if (_" + lSuffix+pChamp.Nom + " != null)":pChamp.Type=="string"?"if (string.IsNullOrEmpty(_" + pChamp.Nom + ")==false)":""#><#= pChamp.IsNullable?"\r\n\t\t\t\t\t":""#>this.Filters["<#= lSuffix #><#= pChamp.Nom #>"] = p => p.<#= pChamp.Nom #><#= pChamp.ValueSearch.Contains("=")?" ":"." #><#= pChamp.ValueSearch#><#= pChamp.ValueSearch.Contains("=")?" ":"(" #>_<#= lSuffix #><#= pChamp.Nom #><#= pChamp.ValueSearch.Contains("=")?"":")" #>;
+            }
+        }
+		<#+
+  }
+
+
+	void GenerateLiaisonCritereDTO(ObservableCollection<LiaisonDTO> pListLiaisonSimple, ObservableCollection<LiaisonDTO> pListLiaisonMultiple)
+  {
+	  #>
+  
+		#endregion
+	
+		#region Liaison
+		<#+ 
+
+	  foreach(LiaisonDTO lElement in pListLiaisonSimple)
+      {
+		  GenerateTakeCritereDTO(lElement,false);
+      }
+
+	  foreach(LiaisonDTO lElement in pListLiaisonMultiple)
+      {
+		  GenerateTakeCritereDTO(lElement,true);
+      }
+
+
+  }
+
+
+	void GenerateTakeCritereDTO(LiaisonDTO pLiaison, bool pIsMultiple){		
+		var lSufix = pIsMultiple?"List":"";
+	  	#>
+
+		private bool _Take<#= lSufix #><#= pLiaison.Nom #>;
+        /// <summary>
+        /// Prendre <#= lSufix #><#= pLiaison.Object #>
+        /// </summary>
+        /// <remarks><#= Environment.UserName #> - <#= DateTime.Now.ToShortDateString() #> - Généré par Template T4 v1.0</remarks>
+        [DataMember]
+        public bool Take<#= lSufix #><#= pLiaison.Nom #>
+        {
+            get { return _Take<#= lSufix #><#= pLiaison.Nom #>; }
+            set
+            {
+                _Take<#= lSufix #><#= pLiaison.Nom #> = value;
+                // <#= Environment.UserName.Substring(0,2) #> - indique qu'il faut prendre <#= pLiaison.Object #>
+                if (_Take<#= lSufix #><#= pLiaison.Nom #>)
+                    this.Include(p => p.<#= lSufix #><#= pLiaison.Nom #>);
+            }
+		}
+
+		<#+
+  }
+
+  void GenerateFinCritereDTO(){			
+		#>
+
+        #endregion
+    }
+}
+
+		<#+
+	}	
+
+#>

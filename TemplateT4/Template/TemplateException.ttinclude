@@ -1,0 +1,69 @@
+﻿<#@ IntelliSenseLanguage processor="tangibleT4Editor" language="C#" #>
+<#+ 
+
+  void GenerateExecption(string pNom){			
+		#>
+using System;
+using System.Runtime.Serialization;
+using WS_Hotline.DTOLibrary.Entities.<#= pNom #>;
+
+namespace WS_Hotline.DTOLibrary.Exception.<#= pNom #>Exception
+{
+    /// <summary>
+    /// Exeption sur le Type <#= pNom #>
+    /// </summary>
+	/// <remarks><#= Environment.UserName #> - <#= DateTime.Now.ToShortDateString() #> - Généré par Template T4 v1.0 </remarks>
+    [Serializable]
+    public class <#= pNom #>Exception : BaseDTOException<<#= pNom #>DTO>
+    {
+        #region Constructeur
+
+		/// <summary>
+        /// Constructeur
+        /// </summary>
+        /// <remarks><#= Environment.UserName #> - <#= DateTime.Now.ToShortDateString() #> - Généré par Template T4 v1.0 </remarks>
+        public <#= pNom #>Exception(): base()
+        { }
+
+		 /// <summary>
+        /// Constructeur avec message
+        /// </summary>
+        /// <param name="pMessage">Message de l'exception</param>
+        /// <remarks><#= Environment.UserName #> - <#= DateTime.Now.ToShortDateString() #> - Généré par Template T4 v1.0 </remarks>
+        public <#= pNom #>Exception(string pMessage): base(pMessage)
+        { }
+
+		/// <summary>
+        /// Constructeur avec innner exception, message generer en automatique
+        /// </summary>
+        /// <param name="pInnrException">Inner exception</param>
+        /// <remarks><#= Environment.UserName #> - <#= DateTime.Now.ToShortDateString() #> - Généré par Template T4 v1.0 </remarks>
+		public <#= pNom #>Exception(System.Exception pInnrException)
+            : base(pInnrException)
+        { }
+
+		/// <summary>
+        /// Constructeur avec message et inner exception
+        /// </summary>
+        /// <param name="pMessage">Message</param>
+        /// <param name="pInnrException">Inner exception</param>
+        /// <remarks><#= Environment.UserName #> - <#= DateTime.Now.ToShortDateString() #> - Généré par Template T4 v1.0 </remarks>
+        public <#= pNom #>Exception(string pMessage, System.Exception pInnrException)
+            : base(pMessage, pInnrException)
+        { }
+
+		/// <summary>
+        /// COnstructeur pour serialisation
+        /// </summary>
+        /// <param name="pInfo">Info</param>
+        /// <param name="pContext">Context</param>
+        /// <remarks><#= Environment.UserName #> - <#= DateTime.Now.ToShortDateString() #> - Généré par Template T4 v1.0 </remarks>
+        protected  <#= pNom #>Exception(SerializationInfo pInfo, StreamingContext pContext): base (pInfo,pContext)
+        { }
+
+        #endregion
+    }
+}
+		<#+
+	}	
+#>

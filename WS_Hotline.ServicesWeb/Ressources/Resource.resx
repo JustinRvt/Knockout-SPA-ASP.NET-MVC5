@@ -1,0 +1,525 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BuNext" xml:space="preserve">
+    <value>Suivant</value>
+  </data>
+  <data name="BuNextTooltip" xml:space="preserve">
+    <value>Merci de selectionner un dossier</value>
+  </data>
+  <data name="ErreurConnexion" xml:space="preserve">
+    <value>Combinaison login / mot de passe incorrecte</value>
+  </data>
+  <data name="ErreurDossier" xml:space="preserve">
+    <value>Aucun dossier sélectionné</value>
+  </data>
+  <data name="Filtre" xml:space="preserve">
+    <value>Filtre :</value>
+  </data>
+  <data name="GestDossier" xml:space="preserve">
+    <value>Sélection des dossiers</value>
+  </data>
+  <data name="InfoSelectionDossier" xml:space="preserve">
+    <value>Veuillez sélectionner le dossier sur lequel vous souhaitez travailler.</value>
+  </data>
+  <data name="LabelATransferer" xml:space="preserve">
+    <value>À transferer</value>
+  </data>
+  <data name="LabelAvoir" xml:space="preserve">
+    <value>Avoir</value>
+  </data>
+  <data name="LabelBtnConnexion" xml:space="preserve">
+    <value>Connexion</value>
+  </data>
+  <data name="LabelDateEcheanceFacture" xml:space="preserve">
+    <value>Date d'échéance de la facture</value>
+  </data>
+  <data name="LabelDateFacture" xml:space="preserve">
+    <value>Date de la facture</value>
+  </data>
+  <data name="LabelDateListePieces" xml:space="preserve">
+    <value>Date de la pièce</value>
+  </data>
+  <data name="LabelDesequilibre" xml:space="preserve">
+    <value>Déséquilibrée</value>
+  </data>
+  <data name="LabelErreurBody" xml:space="preserve">
+    <value>Veuillez sélectionner un dossier</value>
+  </data>
+  <data name="LabelErreurTitle" xml:space="preserve">
+    <value>Erreur</value>
+  </data>
+  <data name="LabelFacture" xml:space="preserve">
+    <value>Facture</value>
+  </data>
+  <data name="LabelFournisseur" xml:space="preserve">
+    <value>Nom du tiers</value>
+  </data>
+  <data name="LabelFournisseurListePieces" xml:space="preserve">
+    <value>Tiers</value>
+  </data>
+  <data name="LabelInformationChoixTypePiece" xml:space="preserve">
+    <value>Veuillez préciser si il s'agit d'une facture fournisseur ou d'un avoir fournisseur</value>
+  </data>
+  <data name="LabelInformationListePieces" xml:space="preserve">
+    <value>Liste des pièces déjà saisies</value>
+  </data>
+  <data name="LabelLogin" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="LabelModuleAchat" xml:space="preserve">
+    <value>Module d'achat</value>
+  </data>
+  <data name="LabelModuleVente" xml:space="preserve">
+    <value>Module de vente</value>
+  </data>
+  <data name="LabelMontantttcListePieces" xml:space="preserve">
+    <value>Montant TTC</value>
+  </data>
+  <data name="LabelMontantTtcPiece" xml:space="preserve">
+    <value>Montant TTC de la pièce</value>
+  </data>
+  <data name="LabelNumeroChrono" xml:space="preserve">
+    <value>Numéro de Chrono de la facture</value>
+  </data>
+  <data name="LabelNumeroPiece" xml:space="preserve">
+    <value>Numéro de la pièce</value>
+  </data>
+  <data name="LabelOu" xml:space="preserve">
+    <value>Ou</value>
+  </data>
+  <data name="LabelPassword" xml:space="preserve">
+    <value>Mot de passe</value>
+  </data>
+  <data name="LabelReferenceFournisseur" xml:space="preserve">
+    <value>Référence fournisseur</value>
+  </data>
+  <data name="LabelSaisieAchat" xml:space="preserve">
+    <value>Saisie d'une pièce d'achat</value>
+  </data>
+  <data name="LabelSaisieVente" xml:space="preserve">
+    <value>Saisie d'une pièce de vente</value>
+  </data>
+  <data name="LabelStatusListePieces" xml:space="preserve">
+    <value>Statut</value>
+  </data>
+  <data name="LabelTransferer" xml:space="preserve">
+    <value>Transferer</value>
+  </data>
+  <data name="LabelTypeListePieces" xml:space="preserve">
+    <value>Type pièce</value>
+  </data>
+  <data name="LabelTypeSaisie" xml:space="preserve">
+    <value>Type de saisie</value>
+  </data>
+  <data name="LegendeAchat" xml:space="preserve">
+    <value>Saisir un achat</value>
+  </data>
+  <data name="LegendeReglement" xml:space="preserve">
+    <value>Saisir un règlement</value>
+  </data>
+  <data name="LegendeVente" xml:space="preserve">
+    <value>Saisir une vente</value>
+  </data>
+  <data name="NomDossier" xml:space="preserve">
+    <value>Nom</value>
+  </data>
+  <data name="SousTitreSCA" xml:space="preserve">
+    <value>Bienvenue sur votre logiciel de Saisie Comptable Assistée</value>
+  </data>
+  <data name="TextCheckBox" xml:space="preserve">
+    <value>Masquer au démarrage</value>
+  </data>
+  <data name="TitleDossier" xml:space="preserve">
+    <value>Dossier</value>
+  </data>
+  <data name="TitreAuthentification" xml:space="preserve">
+    <value>Authentification</value>
+  </data>
+  <data name="ToolTipLogout" xml:space="preserve">
+    <value>Deconnexion</value>
+    <comment>Tooltip de bouton Deconnexion</comment>
+  </data>
+  <data name="ToolTipMail" xml:space="preserve">
+    <value>Mail à envoyer?</value>
+    <comment>Tooltip de bouton Mail</comment>
+  </data>
+  <data name="ToolTipQuestion" xml:space="preserve">
+    <value>Besoin d'aide?</value>
+    <comment>Tooltip de bouton Aide</comment>
+  </data>
+  <data name="SoldeRestant" xml:space="preserve">
+    <value>Solde restant :</value>
+  </data>
+  <data name="Achats" xml:space="preserve">
+    <value>Achats</value>
+    <comment>Tooltip de module Achats</comment>
+  </data>
+  <data name="Export" xml:space="preserve">
+    <value>Export</value>
+    <comment>Tooltip de module Export</comment>
+  </data>
+  <data name="Parametrage" xml:space="preserve">
+    <value>Parametrage</value>
+    <comment>Tooltip de module Parametrage</comment>
+  </data>
+  <data name="Reglements" xml:space="preserve">
+    <value>Réglements</value>
+    <comment>Tooltip de module Réglements</comment>
+  </data>
+  <data name="Ventes" xml:space="preserve">
+    <value>Ventes</value>
+    <comment>Tooltip de module Ventes</comment>
+  </data>
+  <data name="TitreListe" xml:space="preserve">
+    <value>Liste des factures / avoirs sélectionnés</value>
+  </data>
+  <data name="TitreSelectionPiece" xml:space="preserve">
+    <value>Sélectionner une pièce</value>
+  </data>
+  <data name="TotalAvoirs" xml:space="preserve">
+    <value>Total des avoirs séléctionnés :</value>
+  </data>
+  <data name="TotalMontants" xml:space="preserve">
+    <value>Total des montants imputés :</value>
+  </data>
+  <data name="TotalReglement" xml:space="preserve">
+    <value>Total du règlement : </value>
+  </data>
+  <data name="Valider" xml:space="preserve">
+    <value>Valider</value>
+  </data>
+  <data name="LabelPopupErreur" xml:space="preserve">
+    <value>Erreur!</value>
+    <comment>Title de popup erreur</comment>
+  </data>
+  <data name="BodyPopupErreur" xml:space="preserve">
+    <value>Ici le message erreur est affiché!</value>
+    <comment>Le message d'erreur de Popup Erreur</comment>
+  </data>
+  <data name="AfficherPiecesSelec" xml:space="preserve">
+    <value>Afficher uniquement les lignes sélectionnées</value>
+  </data>
+  <data name="Difference" xml:space="preserve">
+    <value>Différence</value>
+  </data>
+  <data name="Montant" xml:space="preserve">
+    <value>Montant</value>
+  </data>
+  <data name="Quitter" xml:space="preserve">
+    <value>Quitter</value>
+  </data>
+  <data name="Restant" xml:space="preserve">
+    <value>Restant</value>
+  </data>
+  <data name="Selectionne" xml:space="preserve">
+    <value>Sélectionné</value>
+  </data>
+  <data name="TitreSelectionFacture" xml:space="preserve">
+    <value>Sélectionner une facture</value>
+  </data>
+  <data name="MontantImputer" xml:space="preserve">
+    <value>Indiquer le montant à imputer</value>
+  </data>
+  <data name="MontantRestant" xml:space="preserve">
+    <value>Montant restant à régler </value>
+  </data>
+  <data name="TitreMontantImputation" xml:space="preserve">
+    <value>Saisie du montant de la facture </value>
+  </data>
+  <data name="Ajouter" xml:space="preserve">
+    <value>Ajouter</value>
+  </data>
+  <data name="Supprimer" xml:space="preserve">
+    <value>Supprimer</value>
+  </data>
+  <data name="LabelReporterNumPiece" xml:space="preserve">
+    <value>Veuillez reporter le numéro sur votre pièce</value>
+  </data>
+  <data name="LabelSaisirMontantTTC" xml:space="preserve">
+    <value>Veuillez saisir le montant TTC</value>
+  </data>
+  <data name="LabelTypeMvt" xml:space="preserve">
+    <value>Type de mouvement</value>
+  </data>
+  <data name="LabelTypeSaisieTitle" xml:space="preserve">
+    <value>Type de saisie</value>
+  </data>
+  <data name="LabelAchat" xml:space="preserve">
+    <value>Achat</value>
+  </data>
+  <data name="LabelAssociations" xml:space="preserve">
+    <value>Associations disponibles</value>
+  </data>
+  <data name="LabelTresorerie" xml:space="preserve">
+    <value>Trésorerie</value>
+  </data>
+  <data name="LabelAnnuler" xml:space="preserve">
+    <value>Annuler</value>
+  </data>
+  <data name="LabelCompteCador" xml:space="preserve">
+    <value>Compte Cador</value>
+  </data>
+  <data name="LabelElem4" xml:space="preserve">
+    <value>Element 4</value>
+  </data>
+  <data name="LabelElem5" xml:space="preserve">
+    <value>Element 5</value>
+  </data>
+  <data name="LabelElem6" xml:space="preserve">
+    <value>Element 6</value>
+  </data>
+  <data name="LabelLibelle" xml:space="preserve">
+    <value>Libellé</value>
+  </data>
+  <data name="LabelType" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="LabelAucunDossier" xml:space="preserve">
+    <value>Aucun Dossier</value>
+  </data>
+  <data name="LabelContactAdmin" xml:space="preserve">
+    <value>Veuillez contacter votre administrateur</value>
+  </data>
+  <data name="LabelContrepartie" xml:space="preserve">
+    <value>Compte de contrepartie</value>
+  </data>
+  <data name="LabelDate" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="LabelMontantPiece" xml:space="preserve">
+    <value>Montant de la pièce</value>
+  </data>
+  <data name="LabelMontantRegle" xml:space="preserve">
+    <value>Montant réglé</value>
+  </data>
+  <data name="LabelNumero" xml:space="preserve">
+    <value>Numéro</value>
+  </data>
+  <data name="LabelSelectionner" xml:space="preserve">
+    <value>Sélectionner</value>
+  </data>
+  <data name="LabelTTC" xml:space="preserve">
+    <value>Montant TTC</value>
+  </data>
+  <data name="ErreurIsNumerique" xml:space="preserve">
+    <value>La valeur saisie n'est pas numérique</value>
+  </data>
+  <data name="ErreurIsSuperieur" xml:space="preserve">
+    <value>La valeur saisie doit être inferieure ou égale au montant à imputer</value>
+  </data>
+  <data name="LabelBanque" xml:space="preserve">
+    <value>Banque</value>
+  </data>
+  <data name="LabelDateReg" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="LabelModeReg" xml:space="preserve">
+    <value>Mode de Règlement</value>
+  </data>
+  <data name="LabelMontantReg" xml:space="preserve">
+    <value>Montant</value>
+  </data>
+  <data name="LabelNomReg" xml:space="preserve">
+    <value>Nom Tiers</value>
+  </data>
+  <data name="LabelAction" xml:space="preserve">
+    <value>Action</value>
+  </data>
+  <data name="LabelAnalytique" xml:space="preserve">
+    <value>Analytique</value>
+  </data>
+  <data name="LabelHT" xml:space="preserve">
+    <value>HT</value>
+  </data>
+  <data name="LabelTVA" xml:space="preserve">
+    <value>Taux TVA</value>
+  </data>
+  <data name="LabelTypeDepense" xml:space="preserve">
+    <value>Type de dépense</value>
+  </data>
+  <data name="LabelMontantTVA" xml:space="preserve">
+    <value>Montant TVA</value>
+  </data>
+  <data name="TitleCompteG" xml:space="preserve">
+    <value>Veuillez sélectionner la première ligne dépense de votre facture :</value>
+  </data>
+  <data name="LabelNumReg" xml:space="preserve">
+    <value>Nº</value>
+  </data>
+  <data name="Modifier" xml:space="preserve">
+    <value>Modifier</value>
+  </data>
+  <data name="LibelleAnalytique" xml:space="preserve">
+    <value>Analytique</value>
+  </data>
+  <data name="LibelleCompteG" xml:space="preserve">
+    <value>Type de dépense</value>
+  </data>
+  <data name="TitlePopUpQues" xml:space="preserve">
+    <value>Module de Question</value>
+  </data>
+  <data name="TitleQuestion" xml:space="preserve">
+    <value>Merci de répondre aux questions ci-dessous :</value>
+  </data>
+  <data name="LibelleColQuestion" xml:space="preserve">
+    <value>Question(s)</value>
+    <comment>Libelle de la colonne Question du popUp Qeustion</comment>
+  </data>
+  <data name="ReponseColQuestion" xml:space="preserve">
+    <value>Réponse(s)</value>
+    <comment>Libelle de la colonne Réponse du popUp Qeustion</comment>
+  </data>
+  <data name="TitleListeReg" xml:space="preserve">
+    <value>Sélection de réglements</value>
+  </data>
+  <data name="LabelErreurBodyReg" xml:space="preserve">
+    <value>Veuillez sélectionner un réglement</value>
+  </data>
+  <data name="LabelAvertBodyReg" xml:space="preserve">
+    <value>Le réglement XXX va être supprimé.</value>
+  </data>
+  <data name="LabelAvertTitle" xml:space="preserve">
+    <value>Avertissement</value>
+  </data>
+  <data name="LabelOk" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="LabelMontantTTC" xml:space="preserve">
+    <value>Montant TTC</value>
+  </data>
+  <data name="LabelTypeTiers" xml:space="preserve">
+    <value>Type de tiers</value>
+  </data>
+  <data name="TitlePasQuestion" xml:space="preserve">
+    <value>Aucun question a été trouvé pour ce compte!</value>
+  </data>
+  <data name="LabelNouvellePiece" xml:space="preserve">
+    <value>Nouvelle pièce</value>
+  </data>
+  <data name="LabelPieceEquilibre" xml:space="preserve">
+    <value>La pièce est équilibrée</value>
+  </data>
+  <data name="LabelQuitterModule" xml:space="preserve">
+    <value>Quitter le module</value>
+  </data>
+  <data name="LabelVerifHT" xml:space="preserve">
+    <value>Le montant HT doit être supérieur à 0</value>
+  </data>
+</root>

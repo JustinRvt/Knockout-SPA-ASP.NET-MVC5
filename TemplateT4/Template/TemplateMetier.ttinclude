@@ -1,0 +1,48 @@
+﻿<#@ IntelliSenseLanguage processor="tangibleT4Editor" language="C#" #>
+<#+ 
+  void GenerateMetier(string pNomObject){			
+		#>
+using WS_Hotline.DataAccessLayer.Entities.<#= pNomObject #>;
+using WS_Hotline.DTOLibrary.Entities.<#= pNomObject #>;
+using WS_Hotline.DTOLibrary.Exception.<#= pNomObject #>Exception;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace WS_Hotline.DomainLibrary.Metier.<#= pNomObject #>
+{
+    /// <summary>
+    /// Classe metier de <#= pNomObject #>
+    /// </summary>
+    /// <remarks><#= Environment.UserName #> - <#= DateTime.Now.ToShortDateString() #> - Généré par Template T4 v1.0</remarks>
+    public class <#= pNomObject #>Metier : BaseMetier<<#= pNomObject #>DAL, <#= pNomObject #>DTO, Critere<#= pNomObject #>DTO,<#= pNomObject #>Exception>
+    {
+
+		#region Validation
+
+        /// <summary>
+        /// Validation de la <#= pNomObject #>
+        /// </summary>
+        /// <param name="pEntity">Entité a valider</param>
+        /// <remarks><#= Environment.UserName #> - <#= DateTime.Now.ToShortDateString() #> - Généré par Template T4 v1.0</remarks>
+        public override void ValidatedDTO(Framework.AccesDonnees.IBaseDTO pEntity)
+        {
+            try
+            {
+                base.ValidatedDTO(pEntity);
+            }
+            catch(Exception ex)
+            {
+                throw new <#= pNomObject #>Exception(ex);
+            }
+        }
+
+        #endregion
+
+    }
+}
+		<#+
+	}	
+#>

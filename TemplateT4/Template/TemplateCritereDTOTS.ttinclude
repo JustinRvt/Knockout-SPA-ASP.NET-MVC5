@@ -1,0 +1,40 @@
+﻿<#@ IntelliSenseLanguage processor="tangibleT4Editor" language="C#" #>
+<#+ 
+  void GenerateDebutCritereDTOTS(string pNomObject){			
+		#>
+import {CritereBaseDTO} from '../../DTO/CritereBaseDTO';
+export class Critere<#= pNomObject #>DTO extends CritereBaseDTO {
+
+	constructor () {
+		super();
+	}
+		<#+
+	}	
+
+
+  void GeneratepPropertyCritereDTOTS(ChampDTO pChamp){		
+  var lSuffix = pChamp.ValueSearch.Contains(">=")?"SuperieurA": pChamp.ValueSearch.Contains("<=")?"InferieurA":"";
+	  	#>
+
+	// <#= Environment.UserName.Substring(0,2) #> <#= pChamp.Commentaire #>
+	<#= lSuffix #><#= pChamp.Nom #> : <#= GetTypesScriptType(pChamp.Type)#>;
+<#+
+	}	
+
+  void GenerateTakeCritereDTOTS(LiaisonDTO pLiaison, bool pIsMultiple){		
+		var lSufix = pIsMultiple?"List":"";
+	  	#>
+
+	// <#= Environment.UserName.Substring(0,2) #> Prendre <#= lSufix #><#= pLiaison.Nom #>
+	Take<#= lSufix #><#= pLiaison.Nom #> : boolean;
+
+		<#+
+  }
+
+  void GenerateFinCritereDTOTS(){			
+		#>
+
+}
+		<#+
+	}	
+#>

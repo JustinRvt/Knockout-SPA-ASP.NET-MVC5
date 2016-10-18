@@ -1,0 +1,41 @@
+﻿<#@ IntelliSenseLanguage processor="tangibleT4Editor" language="C#" #>
+<#+ 
+  void GenerateConfiguration(string pNomObject){			
+		#>
+using WS_Hotline.DTOLibrary.Entities.<#= pNomObject #>;
+using WS_Hotline.Framework.AccesDonnees;
+using System;
+using System.Collections.Generic;
+using System.Data.Entity.ModelConfiguration;
+using System.Data.Entity.ModelConfiguration.Configuration;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace WS_Hotline.DataAccessLayer.Entities.<#= pNomObject #>
+{
+    /// <summary>
+    /// Classe de configuration de <#= pNomObject #>DTO
+    /// </summary>
+    /// <remarks><#= Environment.UserName #> - <#= DateTime.Now.ToShortDateString() #> - Généré par Template T4 v1.0</remarks>
+    public class <#= pNomObject #>Configuration : EntityTypeConfiguration<<#= pNomObject #>DTO>, IEntityConfiguration
+    {
+        #region METHODS
+
+        /// <summary>
+        /// Méthode permettant d'ajouter le registre de configuration
+        /// </summary>
+        /// <param name="pRegistrar">Registre de configuration à ajouter</param>
+        /// <remarks><#= Environment.UserName #> - <#= DateTime.Now.ToShortDateString() #> - Création</remarks>
+        public void Add(ConfigurationRegistrar pRegistrar)
+        {
+            pRegistrar.Add(this);
+        }
+
+        #endregion
+    }
+}
+
+		<#+
+	}	
+#>

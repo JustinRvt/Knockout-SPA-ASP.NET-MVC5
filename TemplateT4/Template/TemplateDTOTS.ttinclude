@@ -1,0 +1,93 @@
+﻿<#@ IntelliSenseLanguage processor="tangibleT4Editor" language="C#" #>
+<#+ 
+
+ void ImportBaseDTOTS(){	
+		#>
+import {BaseDTO} from '../../DTO/BaseDTO';
+<#+
+	}	
+
+
+ void ImportDTOTS(LiaisonDTO pLiaison){	
+		#>
+import {<#= pLiaison.Object + "DTO"#>} from '../<#= pLiaison.Nom + "/" +pLiaison.Object + "DTO"#>';
+<#+
+	}	
+
+
+  void GenerateDebutDTOTS(string pNomObject){	
+		#>
+export class <#= pNomObject #>DTO extends BaseDTO {
+
+	constructor (pObjectJSON?: any) {
+		super();
+		// yl - affectation De l'object
+		if (pObjectJSON != null) {
+                this.AffectationValeur(pObjectJSON);
+            }
+	}
+<#+
+	}	
+
+
+  void GeneratepPropertyDTOTS(ChampDTO pChamp){		
+  
+	  	#>
+
+	// <#= Environment.UserName.Substring(0,2) #> <#= pChamp.Commentaire #>
+	<#= pChamp.Nom #> : <#= GetTypesScriptType(pChamp.Type)#>;
+<#+
+	}	
+
+
+  
+  void GeneratepPropertyLiaisonDTOTS(LiaisonDTO pLiaison, bool pIsMultiple){	
+		var lSufix =  pIsMultiple?"List":"";	
+	  var lType=  pIsMultiple?"Array<" + pLiaison.Object + "DTO>": pLiaison.Object + "DTO";
+	  	#>
+		
+	// <#= Environment.UserName.Substring(0,2) #> Liens vers <#= pLiaison.Object #>
+	<#= lSufix #><#= pLiaison.Nom #> : <#=lType#>;
+<#+
+  }
+
+
+
+	public string GetTypesScriptType(string pPropertyType)
+    {
+        switch (pPropertyType)
+        {
+            case "string":
+                return "string";
+                break;
+
+            case "int":
+                return "number";
+                break;
+
+            case "boolean":
+                return "boolean";
+                break;
+
+			case "bool":
+                return "boolean";
+                break;
+                    
+            case "DateTime":
+                return "string";
+                break;
+
+            default:
+                break;
+        }
+        return "any";
+    }
+
+
+  void GenerateFinDTOTS(){			
+		#>
+
+}
+		<#+
+	}	
+#>

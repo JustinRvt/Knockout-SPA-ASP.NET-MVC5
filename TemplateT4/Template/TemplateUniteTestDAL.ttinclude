@@ -1,0 +1,43 @@
+﻿<#@ IntelliSenseLanguage processor="tangibleT4Editor" language="C#" #>
+<#+ 
+
+  void GenerateUniteTestDAL(string pNomObject,string pDBContext){			
+		#>
+using System;
+using System.Text;
+using System.Collections.Generic;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using WS_Hotline.DataAccessLayer.Entities.<#= pNomObject #>;
+using WS_Hotline.DTOLibrary.Entities.<#= pNomObject #>;
+
+namespace UnitTestDAL.Entities.<#= pNomObject #>
+{
+    /// <summary>
+    /// Classe de test unitaire sur la classe <#= pNomObject #>DAL
+    /// </summary>
+    /// <remarks><#= Environment.UserName #> - <#= DateTime.Now.ToShortDateString() #> - Généré par Template T4 v1.0</remarks>
+    [TestClass]
+    public class <#= pNomObject #>DALTest
+    {
+        /// <summary>
+        /// Test sur la configuration du <#= pNomObject #>DAL
+        /// </summary>
+        /// <remarks><#= Environment.UserName #> - <#= DateTime.Now.ToShortDateString() #> - Généré par Template T4 v1.0</remarks>
+        [TestMethod]
+		[ExpectedException(typeof(System.NullReferenceException), "La fonction n'as pas lever l'exception alors que le <#= pNomObject #>DAL n'es pas configurer dans le proxy.")]
+        public void Configuration<#= pNomObject #>DALTest()
+        {
+            // <#= Environment.UserName.Substring(0,2) #> - Creation du context
+            var lContext = new WS_Hotline.DataAccessLayer.BDD.<#= pDBContext #>();
+            // <#= Environment.UserName.Substring(0,2) #> -  On oublie volontairement de mettre le context
+            // <#= Environment.UserName.Substring(0,2) #> - Creation de l'object DAL
+            <#= pNomObject #>DAL lService = new <#= pNomObject #>DAL(lContext);
+            // <#= Environment.UserName.Substring(0,2) #> - Recuperation d'items
+            var lListe<#= pNomObject #> = lService.GetItems(new Critere<#= pNomObject #>DTO());
+        }
+    }
+}
+
+		<#+
+	}	
+#>

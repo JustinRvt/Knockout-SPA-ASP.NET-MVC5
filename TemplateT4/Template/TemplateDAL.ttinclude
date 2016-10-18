@@ -1,0 +1,137 @@
+﻿<#@ IntelliSenseLanguage processor="tangibleT4Editor" language="C#" #>
+<#+ 
+
+  void GenerateDAL(string pNomObject,string pDBContext){			
+		#>
+using WS_Hotline.DataAccessLayer.BDD;
+using WS_Hotline.DTOLibrary.Entities.<#= pNomObject #>;
+using WS_Hotline.Framework.AccesDonnees;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Data.Entity;
+using System.Linq.Expressions;
+
+namespace WS_Hotline.DataAccessLayer.Entities.<#= pNomObject #>
+{
+    /// <summary>
+    /// Classe data acess layer de <#= pNomObject #>
+    /// </summary>
+    /// <remarks><#= Environment.UserName #> - <#= DateTime.Now.ToShortDateString() #> - Généré par Template T4 v1.0</remarks>
+    public class <#= pNomObject #>DAL : Repository<<#= pNomObject #>DTO, <#= pDBContext #>>
+    {
+        #region CSTR
+
+        /// <summary>
+        /// Constructeur vide
+        /// </summary>
+        /// <remarks><#= Environment.UserName #> - <#= DateTime.Now.ToShortDateString() #> - Création</remarks>
+        public <#= pNomObject #>DAL()
+            : base(new <#= pDBContext #>())
+        {
+            // <#= Environment.UserName.Substring(0,2) #> - Gestion des Lien vers les autres tables
+            this.GestionInclude();
+        }
+
+        /// <summary>
+        /// Constructeur avec paramètre
+        /// </summary>
+        /// <param name="pContext">Context de base de données</param>
+        /// <remarks><#= Environment.UserName #> - <#= DateTime.Now.ToShortDateString() #> - Création</remarks>
+        public <#= pNomObject #>DAL(<#= pDBContext #> pContext)
+            : base(pContext)
+        {
+            // <#= Environment.UserName.Substring(0,2) #> - Gestion des Lien vers les autres tables
+            this.GestionInclude();
+        }
+
+        #endregion
+
+        #region Include
+<#+
+	}	
+
+   void GenerateIncludeDAL(string pNomObject,ObservableCollection<LiaisonDTO> pListLiaisonSimple, ObservableCollection<LiaisonDTO> pListLiaisonMultiple){	
+
+	   #>
+
+        /// <summary>
+        /// Gestion des liens vers les autres tables
+        /// </summary>
+		/// <remarks><#= Environment.UserName #> - <#= DateTime.Now.ToShortDateString() #> - Création</remarks>
+        private void GestionInclude()
+        {
+		<#+
+	   foreach(LiaisonDTO lLiaison in pListLiaisonSimple)
+       {
+		   #>
+
+		    // <#= Environment.UserName.Substring(0,2) #> - Lien vers les <#= lLiaison.Nom #>
+            this.Add(p => p.<#= lLiaison.Nom #>, this.Include<#= lLiaison.Nom #>);
+			<#+
+       }
+
+	   foreach(LiaisonDTO lLiaison in pListLiaisonMultiple)
+       {
+		   #>
+
+		    // <#= Environment.UserName.Substring(0,2) #> - Lien vers les List<#= lLiaison.Object #>
+            this.Add(p => p.List<#= lLiaison.Nom #>, this.IncludeList<#= lLiaison.Nom #>);
+			<#+
+       }
+
+	   #>
+		
+        }
+		<#+ 
+		
+		 foreach(LiaisonDTO lLiaison in pListLiaisonSimple)
+		{
+		#>
+
+        /// <summary>
+        /// Include des <#= lLiaison.Nom #>
+        /// </summary>
+        /// <param name="pSource">Source</param>
+        /// <returns>Include</returns>
+        /// <remarks><#= Environment.UserName #> - <#= DateTime.Now.ToShortDateString() #> - Création</remarks>
+        private IQueryable<<#= pNomObject #>DTO> Include<#= lLiaison.Nom #>(IQueryable<<#= pNomObject #>DTO> pSource, Expression<Func<<#= pNomObject #>DTO, object>> arg2, Framework.Domain.Query.SearchCriteria<<#= pNomObject #>DTO> arg3)
+        {
+            // <#= Environment.UserName.Substring(0,2) #> - retourne liens
+            return pSource.Include(p => p.<#= lLiaison.Nom #>);
+        }
+
+		<#+ 
+		}
+
+
+
+		foreach(LiaisonDTO lLiaison in pListLiaisonMultiple)
+		{
+		#>
+
+        /// <summary>
+        /// Include des List<#= lLiaison.Nom #>
+        /// </summary>
+        /// <param name="pSource">Source</param>
+        /// <returns>Include</returns>
+        /// <remarks><#= Environment.UserName #> - <#= DateTime.Now.ToShortDateString() #> - Création</remarks>
+        private IQueryable<<#= pNomObject #>DTO> IncludeList<#= lLiaison.Nom #>(IQueryable<<#= pNomObject #>DTO> pSource, Expression<Func<<#= pNomObject #>DTO, object>> arg2, Framework.Domain.Query.SearchCriteria<<#= pNomObject #>DTO> arg3)
+        {
+            // <#= Environment.UserName.Substring(0,2) #> - retourne liens
+            return pSource.Include(p => p.List<#= lLiaison.Nom #>);
+        }
+
+		<#+ 
+		}
+		#>
+
+        #endregion
+
+    }
+}
+<#+
+	}	
+#>

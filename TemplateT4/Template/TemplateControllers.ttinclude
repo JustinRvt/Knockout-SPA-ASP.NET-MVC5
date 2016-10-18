@@ -1,0 +1,26 @@
+﻿<#@ IntelliSenseLanguage processor="tangibleT4Editor" language="C#" #>
+<#+ 
+
+  void GenerateControllers(string pNomObject){			
+		#>
+using WS_Hotline.DomainLibrary.Metier.<#= pNomObject #>;
+using WS_Hotline.DTOLibrary.Entities.<#= pNomObject #>;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+
+namespace WS_Hotline.ServicesWeb.Controllers
+{
+    /// <summary>
+    /// Controlleur de <#= pNomObject #>
+    /// </summary>
+    /// <remarks><#= Environment.UserName #> - <#= DateTime.Now.ToShortDateString() #> - Généré par Template T4 v1.0</remarks>
+    public class <#= pNomObject #>Controller : Base.BaseController<<#= pNomObject #>Metier, <#= pNomObject #>DTO, Critere<#= pNomObject #>DTO>
+    {
+    }
+}
+		<#+
+	}	
+#>

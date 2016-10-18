@@ -1,0 +1,240 @@
+﻿<#@ template  debug="true" hostSpecific="true" #>
+<#@ output extension=".cs" #>
+<#@ Assembly Name="System.Core" #>
+<#@ Assembly Name="System.Windows.Forms" #>
+<#@ import namespace="System" #> 
+<#@ import namespace="System.IO" #>
+<#@ import namespace="System.Collections.ObjectModel" #> 
+<#@ import namespace="System.Diagnostics" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Collections" #>
+<#@ import namespace="System.Collections.Generic" #> 
+<#@ import namespace="System.Runtime.Remoting.Messaging" #>
+<#@ include file=".\Manager\TemplateFileManager.ttinclude" #>
+<#@ include file=".\Template\TemplateDTO.ttinclude" #>
+<#@ include file=".\Template\TemplateCritereDTO.ttinclude" #>
+<#@ include file=".\Template\TemplateDAL.ttinclude" #>
+<#@ include file=".\Template\TemplateConfiguration.ttinclude" #>
+<#@ include file=".\Template\TemplateUniteTestDAL.ttinclude" #>
+<#@ include file=".\Template\TemplateMetier.ttinclude" #>
+<#@ include file=".\Template\TemplateControllers.ttinclude" #>
+<#@ include file=".\Template\ObjectDTO.ttinclude" #>
+<#@ include file=".\Template\TemplateDTOTS.ttinclude" #>
+<#@ include file=".\Template\TemplateCritereDTOTS.ttinclude" #>
+<#@ include file=".\Template\TemplateUniteTestMetier.ttinclude" #>
+<#@ include file=".\Template\TemplateException.ttinclude" #>
+<#
+	/*******************************************************************************************************
+	******************************** Generateur de classe automatique **************************************
+	*******************************************************************************************************/
+
+
+
+
+	/* ****************************************************************************************************
+	Pour generer les classe automatiquement :
+	- modifier le fichier FileObject.xml Avec l'application BddXMLObjectGenerator
+	- Ecraser le fichier FileObject.xml
+	- Ctrl + s Sur ce fichier
+
+	/!\ Attention /!\
+	Si les fichiers existent ils ne seront pas ecrasés
+	********************************************************************************************************/
+
+
+
+
+    // yl - Recuperation du path de la solution
+	var lServiceProvider = this.Host as IServiceProvider;
+    var lDte = lServiceProvider.GetService(typeof(EnvDTE.DTE)) as EnvDTE.DTE;
+    var lPath = System.IO.Path.GetDirectoryName(lDte.Solution.FullName);
+    // yl - Recuperation du FileObject
+	string lFilename =lPath + @"\TemplateT4\FileObject.xml";
+	
+    // yl - Lecture du fichier XML
+	string lXml = File.ReadAllText(lFilename);
+    // yl - Dezerialisation 
+	ContextDTO lObject =  DTOSerializerHelper.DeserializeXml<ContextDTO>(lXml);
+    // yl - Affectation du Context
+	lObject.NomContext="HotlineDbContext";
+
+
+	// ****************************** Ne pas Modifier!!!!! ***********************************************
+	// yl - Creation Des template
+	var lManager = TemplateFileManager.Create(this);
+	lManager.CanOverrideExistingFile=false;
+	
+	lObject.ListObject.ToList().ForEach(pElement => 
+	{
+		var lItem = (ObjectDTO)pElement;
+		if(lItem.IsSelected)
+        {
+			// yl - DTO
+			lManager.StartNewFile(lItem.Nom + "DTO.cs","DTOLibrary", lItem.Nom);
+			GenerateDebutDTO(lItem.Nom,lItem.NomEnBDD);
+			lItem.ListChamp.ToList().ForEach(pElementChamp =>
+            {
+                // yl - Gstion property
+				var lChamp = (ChampDTO)pElementChamp;
+				if(lChamp.IsSelected)
+                {
+					GeneratepPropertyDTO(lChamp);
+                }
+            });
+			GenerateLiaisonDTO(lItem.ListLiaisonSimple,lItem.ListLiaisonMultiple);
+			GenerateFinDTO();
+			
+
+			// yl - CritereDTO
+			lManager.StartNewFile("Critere" + lItem.Nom+ "DTO.cs","DTOLibrary", lItem.Nom );
+			GenerateDebutCritereDTO(lItem.Nom);
+			lItem.ListChamp.ToList().ForEach(pElementChamp =>
+            {
+                // yl - GEstion Critere de recherche
+				var lChamp = (ChampDTO)pElementChamp;
+				if(lChamp.IsSelected && lChamp.IsSearch)
+                {
+                    // yl - si superieur et inferieur
+					if(lChamp.ValueSearch== ">= & <=")
+                    {
+						lChamp.ValueSearch = ">=";
+
+						GeneratePropertyCritereDTO(lChamp);
+
+						
+						lChamp.ValueSearch = "<=";
+
+						GeneratePropertyCritereDTO(lChamp);
+
+						lChamp.ValueSearch = ">= & <=";
+
+                    }else
+					{
+						GeneratePropertyCritereDTO(lChamp);
+                    }
+					
+                }
+            });
+			GenerateLiaisonCritereDTO(lItem.ListLiaisonSimple, lItem.ListLiaisonMultiple);
+			GenerateFinCritereDTO();
+
+			// yl - Exception
+			lManager.StartNewFile(lItem.Nom+ "Exception.cs","DTOLibrary", lItem.Nom + "Exception" );
+			GenerateExecption(lItem.Nom);
+
+			// yl - Configuration
+			lManager.StartNewFile(lItem.Nom + "Configuration.cs","DataAccessLayer", lItem.Nom );
+			GenerateConfiguration(lItem.Nom);
+
+			// yl - DAL
+			lManager.StartNewFile( lItem.Nom + "DAL.cs","DataAccessLayer",lItem.Nom );
+			GenerateDAL(lItem.Nom,lObject.NomContext);
+			GenerateIncludeDAL(lItem.Nom,lItem.ListLiaisonSimple,lItem.ListLiaisonMultiple);
+
+			// yl - Unite Test DAL
+			lManager.StartNewFile( lItem.Nom + "DALTest.cs","UnitTestDAL", lItem.Nom );
+			GenerateUniteTestDAL(lItem.Nom,lObject.NomContext);
+
+			// yl - Metier
+			lManager.StartNewFile( lItem.Nom + "Metier.cs","DomainLibrary", lItem.Nom );
+			GenerateMetier(lItem.Nom);
+
+			// yl - Unite Test Metier
+			lManager.StartNewFile( lItem.Nom + "MetierTest.cs","UnitTestDomain", lItem.Nom );
+			GenerateUniteTestMetier(lItem.Nom);
+
+			// yl - Controllers
+			lManager.StartNewFile( lItem.Nom + "Controller.cs","ServicesWeb", "Controllers" );
+			GenerateControllers(lItem.Nom);
+
+			// yl - DTO.ts
+			lManager.StartNewFile(lItem.Nom + "DTO.ts","ServicesWeb",  lItem.Nom);
+
+			ImportBaseDTOTS();
+			lItem.ListLiaisonSimple.ToList().ForEach(pElementLiaison =>
+            {
+				ImportDTOTS(pElementLiaison);
+            });
+			lItem.ListLiaisonMultiple.ToList().ForEach(pElementLiaison =>
+            {
+				ImportDTOTS(pElementLiaison);
+            });
+			
+			GenerateDebutDTOTS(lItem.Nom);
+			lItem.ListChamp.ToList().ForEach(pElementChamp =>
+            {
+                // yl - Gestion property
+				var lChamp = (ChampDTO)pElementChamp;
+				if(lChamp.IsSelected)
+                {
+					GeneratepPropertyCritereDTOTS(lChamp);
+                }
+            });
+			lItem.ListLiaisonSimple.ToList().ForEach(pElementLiaison =>
+            {
+                // yl - Gestion property DTO
+				GeneratepPropertyLiaisonDTOTS(pElementLiaison,false);
+            });
+			lItem.ListLiaisonMultiple.ToList().ForEach(pElementLiaison =>
+            {
+                // yl - Gestion property ListDTO
+				GeneratepPropertyLiaisonDTOTS(pElementLiaison,true);
+            });
+			
+			GenerateFinDTOTS();
+
+
+			// yl - CritereDTO.ts
+			lManager.StartNewFile("Critere" + lItem.Nom + "DTO.ts","ServicesWeb", lItem.Nom);
+			GenerateDebutCritereDTOTS(lItem.Nom);
+			lItem.ListChamp.ToList().ForEach(pElementChamp =>
+            {
+                // yl - Gestion property
+				var lChamp = (ChampDTO)pElementChamp;
+				if(lChamp.IsSelected && lChamp.IsSearch)
+                {
+					// yl - si superieur et inferieur
+					if(lChamp.ValueSearch== ">= & <=")
+                    {
+						
+						lChamp.ValueSearch = ">=";
+						GeneratepPropertyCritereDTOTS(lChamp);
+
+						lChamp.ValueSearch = "<=";
+						GeneratepPropertyCritereDTOTS(lChamp);
+
+						lChamp.ValueSearch= ">= & <=";
+
+                    }else
+					{
+						GeneratepPropertyCritereDTOTS(lChamp);
+                    }
+					
+                }
+            });
+
+			//yl gestion des take
+			lItem.ListLiaisonSimple.ToList().ForEach(pElementLiaison =>
+            {
+				GenerateTakeCritereDTOTS(pElementLiaison,false);
+            });
+			lItem.ListLiaisonMultiple.ToList().ForEach(pElementLiaison =>
+            {
+				GenerateTakeCritereDTOTS(pElementLiaison,true);
+			});
+
+			
+			GenerateFinCritereDTOTS();
+			
+        }
+
+
+	});
+
+	lManager.Process();
+    
+
+	
+
+
+#>

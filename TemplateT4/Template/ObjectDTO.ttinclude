@@ -1,0 +1,497 @@
+﻿<#@ IntelliSenseLanguage processor="tangibleT4Editor" language="C#" #>
+<#@ import namespace="System" #>
+<#@ import namespace="System.IO" #>
+<#@ import namespace="System.Diagnostics" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Collections" #>
+<#@ import namespace="System.Xml.Serialization" #>
+<#@ import namespace="System.Threading.Tasks" #>
+<#@ import namespace="System.Collections.Generic" #> 
+<#@ import namespace="System.Collections.ObjectModel" #> 
+<#@ import namespace="System.Runtime.Remoting.Messaging" #>
+<#+ 
+
+public class DTOSerializerHelper
+    {
+        #region CSTR
+
+        /// <summary>
+        /// Constructeur vide
+        /// </summary>
+        /// <remarks>Guillaume Bécard - 2015-06-24 - Création</remarks>
+        public DTOSerializerHelper()
+        {
+        }
+
+        #endregion
+
+        /// <summary>
+        /// Creation d'un string xml a partir d'un dto.
+        /// </summary>
+        /// <param name="dto">DTO</param>
+        /// <returns>XML</returns>
+        /// <remarks>LOUIS Yoann 16/06/2015 Version 1.0.1</remarks>
+        public static string SerializeDTO(BaseDTO dto)
+        {
+            try
+            {
+                XmlSerializer xmlSer = new XmlSerializer(dto.GetType());
+                StringWriter sWriter = new StringWriter();
+                // yl - Serializsation dto vers xml.
+                xmlSer.Serialize(sWriter, dto);
+                // yl - Retourne string of xml. on remplace les < par ¤ pour autoriser le tranfere
+                return sWriter.ToString();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        /// <summary>
+        /// Deserialisation d'un xml vers un DTO Specifique.
+        /// </summary>
+        /// <param name="xml">xml en string</param>
+        /// <param name="dto">Type du DTO Atendu</param>
+        /// <returns>DTO</returns>
+        /// <remarks>LOUIS Yoann 16/06/2015 Version 1.0.1</remarks>
+        public static TIn DeserializeXml<TIn>(string xml)
+        {
+            try
+            {
+                XmlSerializer xmlSer = new XmlSerializer(typeof(TIn));
+                // yl - lecture du XML. on remplace les ¤ par < pour reformer le xml
+                StringReader sReader = new StringReader(xml);
+                // yl - Cast de l'xml en dto
+                TIn retDTO = (TIn)xmlSer.Deserialize(sReader);
+
+                return retDTO;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+    }
+ 
+public class BaseDTO 
+    {
+        #region Constructeur
+
+        /// <summary>
+        /// Contructeur DTO
+        /// </summary>
+        /// <remarks>LOUIS Yoann 08/10/2014</remarks>
+        public BaseDTO()
+        {
+        }
+
+        #endregion
+
+        #region Methode
+
+        /// <summary>
+        /// serialisation
+        /// </summary>
+        /// <returns></returns>
+        /// <remarks>LOUIS Yoann 17/06/2014</remarks>
+        public string SerializeDTO()
+        {
+            return DTOSerializerHelper.SerializeDTO(this);
+        }
+
+
+        #endregion
+
+       
+    }
+
+public class ChampDTO
+   {
+        private string _Nom;
+        /// <summary>
+        /// Nom du la property
+        /// </summary>
+        /// <remarks>ylouis - 06/10/2015 - Généré par snippet v1.0</remarks>
+        public string Nom
+        {
+            get
+            {
+                return this._Nom;
+            }
+            set
+            {
+                this._Nom = value;
+            }
+        }
+
+        private string _NomColumn;
+        /// <summary>
+        /// nom de la colonne
+        /// </summary>
+        /// <remarks>ylouis - 06/10/2015 - Généré par snippet v1.0</remarks>
+        public string NomColumn
+        {
+            get
+            {
+                return this._NomColumn;
+            }
+            set
+            {
+                this._NomColumn = value;
+            }
+        }
+
+        private string _Commentaire;
+        /// <summary>
+        /// Commentaire a afficher
+        /// </summary>
+        /// <remarks>ylouis - 06/10/2015 - Généré par snippet v1.0</remarks>
+        public string Commentaire
+        {
+            get
+            {
+                return this._Commentaire;
+            }
+            set
+            {
+                this._Commentaire = value;
+            }
+        }
+
+        private string _Type;
+        /// <summary>
+        /// Type A créer dans le DTO
+        /// </summary>
+        /// <remarks>ylouis - 06/10/2015 - Généré par snippet v1.0</remarks>
+        public string Type
+        {
+            get
+            {
+                return this._Type;
+            }
+            set
+            {
+                this._Type = value;
+            }
+        }
+
+        private bool _IsKey;
+        /// <summary>
+        /// indique si clée de la table
+        /// </summary>
+        /// <remarks>ylouis - 06/10/2015 - Généré par snippet v1.0</remarks>
+        public bool IsKey
+        {
+            get
+            {
+                return this._IsKey;
+            }
+            set
+            {
+                this._IsKey = value;
+            }
+        }
+
+        private bool _IsNullable;
+        /// <summary>
+        /// Est null
+        /// </summary>
+        /// <remarks>ylouis - 06/10/2015 - Généré par snippet v1.0</remarks>
+        public bool IsNullable
+        {
+            get
+            {
+                return this._IsNullable;
+            }
+            set
+            {
+                this._IsNullable = value;
+            }
+        }
+
+        private int _Maxlength;
+        /// <summary>
+        /// Longueur maxi
+        /// </summary>
+        /// <remarks>ylouis - 06/10/2015 - Généré par snippet v1.0</remarks>
+        public int Maxlength
+        {
+            get
+            {
+                return this._Maxlength;
+            }
+            set
+            {
+                this._Maxlength = value;
+            }
+        }
+
+        private Boolean _IsSearch;
+        /// <summary>
+        /// peut etre rechercher
+        /// </summary>
+        /// <remarks>ylouis - 06/10/2015 - Généré par snippet v1.0</remarks>
+        public Boolean IsSearch
+        {
+            get
+            {
+                return this._IsSearch;
+            }
+            set
+            {
+                this._IsSearch = value;
+            }
+        }
+
+        private String _ValueSearch;
+        /// <summary>
+        /// valeur de recherche
+        /// </summary>
+        /// <remarks>ylouis - 06/10/2015 - Généré par snippet v1.0</remarks>
+        public String ValueSearch
+        {
+            get
+            {
+                return this._ValueSearch;
+            }
+            set
+            {
+                this._ValueSearch = value;
+            }
+        }
+
+        private bool _IsSelected;
+        /// <summary>
+        /// est selectionner
+        /// </summary>
+        /// <remarks>ylouis - 06/10/2015 - Généré par snippet v1.0</remarks>
+        public bool IsSelected
+        {
+            get
+            {
+                return this._IsSelected;
+            }
+            set
+            {
+                this._IsSelected = value;
+            }
+        }
+
+    }
+
+public class ObjectDTO:BaseDTO
+    {
+        private String _Nom;
+        /// <summary>
+        /// Commentaire
+        /// </summary>
+        /// <remarks>ylouis - 06/10/2015 - Généré par snippet v1.0</remarks>
+        public String Nom
+        {
+            get
+            {
+                return this._Nom;
+            }
+            set
+            {
+                this._Nom = value;
+            }
+        }
+
+        private string _NomEnBDD;
+        /// <summary>
+        /// Nom en BDD
+        /// </summary>
+        /// <remarks>ylouis - 06/10/2015 - Généré par snippet v1.0</remarks>
+        public string NomEnBDD
+        {
+            get
+            {
+                return this._NomEnBDD;
+            }
+            set
+            {
+                this._NomEnBDD = value;
+            }
+        }
+
+        private bool _IsSelected;
+        /// <summary>
+        /// Indique si selectionnner
+        /// </summary>
+        /// <remarks>ylouis - 06/10/2015 - Généré par snippet v1.0</remarks>
+        public bool IsSelected
+        {
+            get
+            {
+                return this._IsSelected;
+            }
+            set
+            {
+                this._IsSelected = value;
+            }
+        }
+
+        private ObservableCollection<ChampDTO> _ListChamp;
+        /// <summary>
+        /// Liste des champs
+        /// </summary>
+        /// <remarks>ylouis - 06/10/2015 - Généré par snippet v1.0</remarks>
+        public ObservableCollection<ChampDTO> ListChamp
+        {
+            get
+            {
+                return this._ListChamp;
+            }
+            set
+            {
+                this._ListChamp = value;
+            }
+        }
+
+		 private ObservableCollection<LiaisonDTO> _ListLiaisonSimple;
+        /// <summary>
+        /// Liste des Liaison
+        /// </summary>
+        /// <remarks>ylouis - 06/10/2015 - Généré par snippet v1.0</remarks>
+        public ObservableCollection<LiaisonDTO> ListLiaisonSimple
+        {
+            get
+            {
+                return this._ListLiaisonSimple;
+            }
+            set
+            {
+                this._ListLiaisonSimple = value;
+            }
+        }
+
+
+        private ObservableCollection<LiaisonDTO> _ListLiaisonMultiple;
+        /// <summary>
+        /// Liste des Liaison
+        /// </summary>
+        /// <remarks>ylouis - 06/10/2015 - Généré par snippet v1.0</remarks>
+        public ObservableCollection<LiaisonDTO> ListLiaisonMultiple
+        {
+            get
+            {
+                return this._ListLiaisonMultiple;
+            }
+            set
+            {
+                this._ListLiaisonMultiple = value;
+            }
+        }
+
+    }
+
+public class ContextDTO:BaseDTO
+    {
+        private String _ConnectionString;
+        /// <summary>
+        /// ConnectionString
+        /// </summary>
+        /// <remarks>ylouis - 06/10/2015 - Généré par snippet v1.0</remarks>
+        public String ConnectionString
+        {
+            get { return _ConnectionString; }
+            set
+            {
+                _ConnectionString = value;
+               
+            }
+        }
+
+        private ObservableCollection<ObjectDTO> _ListObject;
+        /// <summary>
+        /// ListObject
+        /// </summary>
+        /// <remarks>ylouis - 06/10/2015 - Généré par snippet v1.0</remarks>
+        public ObservableCollection<ObjectDTO> ListObject
+        {
+            get
+            {
+                return this._ListObject;
+            }
+            set
+            {
+                this._ListObject = value;
+            }
+        }
+
+		 private string _NomContext;
+        /// <summary>
+        /// Nom context
+        /// </summary>
+        /// <remarks>ylouis - 06/10/2015 - Généré par snippet v1.0</remarks>
+        public string NomContext
+        {
+            get
+            {
+                return this._NomContext;
+            }
+            set
+            {
+                this._NomContext = value;
+            }
+        }
+    }
+
+ public class LiaisonDTO : BaseDTO
+    {
+        private string _Object;
+        /// <summary>
+        /// Object de la liaison
+        /// </summary>
+        /// <remarks>ylouis - 10/02/2016</remarks>
+        public string Object
+        {
+            get
+            {
+                return this._Object;
+            }
+            set
+            {
+                this._Object = value;
+            }
+        }
+
+        private string _Champ;
+        /// <summary>
+        /// Champ liés
+        /// </summary>
+        /// <remarks>ylouis - 10/02/2016</remarks>
+        public string Champ
+        {
+            get
+            {
+                return this._Champ;
+            }
+            set
+            {
+                this._Champ = value;
+            }
+        }
+
+
+        private string _Nom;
+        /// <summary>
+        /// Nom de la liaison
+        /// </summary>
+        /// <remarks>ylouis - 16/02/2016</remarks>
+        public string Nom
+        {
+            get
+            {
+                return this._Nom;
+            }
+            set
+            {
+                this._Nom = value;
+            }
+        }
+    }   
+
+#>

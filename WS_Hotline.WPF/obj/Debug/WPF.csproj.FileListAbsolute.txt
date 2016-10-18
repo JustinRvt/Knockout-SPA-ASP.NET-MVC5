@@ -1,0 +1,8 @@
+C:\Tortoise Local\WS_Hotline\WS_Hotline.WPF\obj\Debug\WPF.csprojResolveAssemblyReference.cache
+C:\Tortoise Local\WS_Hotline\WS_Hotline.WPF\obj\Debug\MainWindow.g.cs
+C:\Tortoise Local\WS_Hotline\WS_Hotline.WPF\obj\Debug\View\Ecriture\UCModuleSelectionEcriture.g.cs
+C:\Tortoise Local\WS_Hotline\WS_Hotline.WPF\obj\Debug\View\Ecriture\UCRechercheEcriture.g.cs
+C:\Tortoise Local\WS_Hotline\WS_Hotline.WPF\obj\Debug\App.g.cs
+C:\Tortoise Local\WS_Hotline\WS_Hotline.WPF\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Tortoise Local\WS_Hotline\WS_Hotline.WPF\obj\Debug\WS_Hotline.WPF_MarkupCompile.cache
+C:\Tortoise Local\WS_Hotline\WS_Hotline.WPF\obj\Debug\WS_Hotline.WPF_MarkupCompile.lref

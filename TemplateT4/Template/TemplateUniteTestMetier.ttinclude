@@ -1,0 +1,71 @@
+﻿<#@ IntelliSenseLanguage processor="tangibleT4Editor" language="C#" #>
+<#+ 
+  void GenerateUniteTestMetier(string pNomObject)
+{			
+		#>
+using System;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using WS_Hotline.DTOLibrary.Entities.<#= pNomObject #>;
+using WS_Hotline.DTOLibrary.Exception.<#= pNomObject #>Exception;
+using WS_Hotline.DomainLibrary.Metier.<#= pNomObject #>;
+using WS_Hotline.DTOLibrary.Exception.GeneriqueException;
+
+namespace UnitTestDomain.Metier.<#= pNomObject #>
+{
+    /// <summary>
+    /// Classe de test unitaire dédié a la classe <#= pNomObject #>Metier
+    /// </summary>
+    /// <remarks><#= Environment.UserName #> - <#= DateTime.Now.ToShortDateString() #> - Généré par Template T4 v1.0</remarks>
+    [TestClass]
+    public class <#= pNomObject #>MetierTest
+    {
+		#region Validation DTO
+
+        /// <summary>
+        /// Test que la méthode "ValidatedDTO" de <#= pNomObject #>Metier retourne bien une erreur de type <#= pNomObject #>Exception.
+        /// </summary>
+        /// <remarks><#= Environment.UserName #> - <#= DateTime.Now.ToShortDateString() #> - Généré par Template T4 v1.0</remarks>
+        [TestMethod]
+        [ExpectedException(typeof(<#= pNomObject #>Exception),
+            "La fonction n'as pas lever l'exception <#= pNomObject #>Exception.")]
+        public void Validation<#= pNomObject #>DTOThrowExceptionTest()
+        {
+            // <#= Environment.UserName.Substring(0,2) #> - initialisation metier.
+            var lMetier = new <#= pNomObject #>Metier();
+            // <#= Environment.UserName.Substring(0,2) #> - On lance la methode "ValidatedDTO" avec un paramettre invalide. => Une exception de type <#= pNomObject #>Exception doit etre lever
+            lMetier.ValidatedDTO(new Critere<#= pNomObject #>DTO());
+        }
+
+		#endregion
+
+        #region Validation Critere DTO
+		
+        /// <summary>
+        /// Test que la méthode de ValidatedCritere de <#= pNomObject #>Metier retourne bien une Exception.
+        /// </summary>
+        /// <remarks><#= Environment.UserName #> - <#= DateTime.Now.ToShortDateString() #> - Généré par Template T4 v1.0</remarks>
+        [TestMethod]
+        public void Validation<#= pNomObject #>CritereDTOThrowExceptionTest()
+        {
+			try
+            {
+                // <#= Environment.UserName.Substring(0,2) #> - initialisation metier.
+                var lMetier = new <#= pNomObject #>Metier();
+                // <#= Environment.UserName.Substring(0,2) #> - On lance la methode "ValidatedCritere" avec un paramettre invalide.
+                lMetier.ValidatedCritere(new <#= pNomObject #>DTO());
+            }
+            catch(Exception ex)
+            {
+                // <#= Environment.UserName.Substring(0,2) #> - une exception est lever. le test est réussi.
+                return;
+            }
+            // <#= Environment.UserName.Substring(0,2) #> - si aucune exception lever c'est un FAIL.
+            Assert.Fail("Aucune exception lever");
+        }
+
+        #endregion
+    }
+}
+		<#+
+	}	
+#>

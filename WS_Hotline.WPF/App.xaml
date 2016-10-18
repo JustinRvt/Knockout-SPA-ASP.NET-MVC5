@@ -1,0 +1,18 @@
+﻿<Application x:Class="WS_Hotline.WPF.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:ViewModels="clr-namespace:WS_Hotline.WPF.ViewModel"
+             xmlns:ViewModelEcriture="clr-namespace:WS_Hotline.WPF.ViewModel.Ecriture"
+             xmlns:Convertor ="clr-namespace:WS_Hotline.WPF.Converter"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ViewModels:MainViewModel x:Key="MainViewModel"/>
+        <ViewModelEcriture:RechercheEcritureViewModel x:Key="RechercheEcritureViewModel"/>
+        <ViewModelEcriture:ListEcrituresViewModel x:Key="ListEcrituresViewModel"/>
+        <ViewModelEcriture:AddOrUpdateEcritureViewModel x:Key="AddOrUpdateEcritureViewModel"/>
+        
+        <!-- Converter -->
+        <Convertor:ConvertEModuleToView x:Key="ConvertEModuleToView"/>
+        
+    </Application.Resources>
+</Application>

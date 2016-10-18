@@ -42,7 +42,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "06 - API Gemini", "06 - API
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API_GeminiLibrary", "API_GeminiLibrary\API_GeminiLibrary.csproj", "{9CDA1FAD-B809-40D7-90AE-C4AA7E07DFD1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Front-End", "Front-End\Front-End.csproj", "{7DB993B4-61B6-47BE-89DA-0807358FBFBA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Front-End", "WS_Hotline.Front-End\Front-End.csproj", "{7DB993B4-61B6-47BE-89DA-0807358FBFBA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

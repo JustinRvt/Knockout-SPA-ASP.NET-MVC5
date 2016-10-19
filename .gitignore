@@ -43,6 +43,7 @@ docs
 lib
 test
 tmp
+bin
 
 src/**/*.js
 src/**/*.js.map

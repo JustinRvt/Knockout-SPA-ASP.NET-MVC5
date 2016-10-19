@@ -42,3 +42,4 @@ C:\Tortoise Local\WS_Hotline\UnitTestDAL\bin\Debug\fr\System.Web.WebPages.Deploy
 C:\Tortoise Local\WS_Hotline\UnitTestDAL\obj\Debug\UnitTestDAL.csprojResolveAssemblyReference.cache
 C:\Tortoise Local\WS_Hotline\UnitTestDAL\obj\Debug\UnitTestDAL.dll
 C:\Tortoise Local\WS_Hotline\UnitTestDAL\obj\Debug\UnitTestDAL.pdb
+C:\Tortoise Local\Dev-WS_Hotline\UnitTestDAL\obj\Debug\UnitTestDAL.csprojResolveAssemblyReference.cache

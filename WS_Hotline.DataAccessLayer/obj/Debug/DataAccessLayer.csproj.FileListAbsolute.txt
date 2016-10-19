@@ -61,3 +61,4 @@ C:\Tortoise Local\WS_Hotline\WS_Hotline.DataAccessLayer\bin\Debug\fr\System.Web.
 C:\Tortoise Local\WS_Hotline\WS_Hotline.DataAccessLayer\obj\Debug\DataAccessLayer.csprojResolveAssemblyReference.cache
 C:\Tortoise Local\WS_Hotline\WS_Hotline.DataAccessLayer\obj\Debug\WS_Hotline.DataAccessLayer.dll
 C:\Tortoise Local\WS_Hotline\WS_Hotline.DataAccessLayer\obj\Debug\WS_Hotline.DataAccessLayer.pdb
+C:\Tortoise Local\Dev-WS_Hotline\WS_Hotline.DataAccessLayer\obj\Debug\DataAccessLayer.csprojResolveAssemblyReference.cache

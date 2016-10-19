@@ -47,3 +47,4 @@ C:\Tortoise Local\WS_Hotline\UnitTestDomain\bin\Debug\fr\System.Web.WebPages.res
 C:\Tortoise Local\WS_Hotline\UnitTestDomain\bin\Debug\fr\System.Web.WebPages.Deployment.resources.dll
 C:\Tortoise Local\WS_Hotline\UnitTestDomain\obj\Debug\UnitTestDomain.dll
 C:\Tortoise Local\WS_Hotline\UnitTestDomain\obj\Debug\UnitTestDomain.pdb
+C:\Tortoise Local\Dev-WS_Hotline\UnitTestDomain\obj\Debug\UnitTestDomain.csprojResolveAssemblyReference.cache

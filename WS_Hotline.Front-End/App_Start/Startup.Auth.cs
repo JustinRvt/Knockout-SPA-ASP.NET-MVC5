@@ -8,11 +8,15 @@ using Microsoft.Owin.Security.DataProtection;
 using Microsoft.Owin.Security.Google;
 using Microsoft.Owin.Security.OAuth;
 using Owin;
+using Countersoft.Gemini.Api;
+using Countersoft.Gemini.Commons.Dto;
 using Front_End.Models;
 using Front_End.Providers;
 
 namespace Front_End
 {
+
+
   public partial class Startup
   {
     // Autoriser l'application à utiliser OAuthAuthorization. Vous pouvez ensuite sécuriser vos API Web
@@ -29,6 +33,8 @@ namespace Front_End
         AllowInsecureHttp = true
       };
     }
+
+
 
     public static OAuthAuthorizationServerOptions OAuthOptions { get; private set; }
 
@@ -88,6 +94,7 @@ namespace Front_End
       //    ClientId = "",
       //    ClientSecret = ""
       //});
+
     }
   }
 }

@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7CD234CA-43B2-49F1-9BE4-DE8F298232F4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WS_Hotline.DTOLibrary</RootNamespace>
+    <AssemblyName>WS_Hotline.DTOLibrary</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Business\ExceptionDTO\ExceptionDTO.cs" />
+    <Compile Include="Business\Navigation\NavigationDTO.cs" />
+    <Compile Include="Business\Ressource\CritereRessourceDTO.cs" />
+    <Compile Include="Business\Ressource\RessourceDTO.cs" />
+    <Compile Include="CritereBaseDTO.cs" />
+    <Compile Include="Entities\Authentification\AuthentificationDTO.cs" />
+    <Compile Include="Entities\Authentification\CritereAuthentificationDTO.cs" />
+    <Compile Include="Entities\Authentification\ListeAuthentificationDTO.cs" />
+    <Compile Include="Entities\Blocage\BlocageDTO.cs" />
+    <Compile Include="Entities\Blocage\CritereBlocageDTO.cs" />
+    <Compile Include="Entities\Cause\CauseDTO.cs" />
+    <Compile Include="Entities\Cause\CritereCauseDTO.cs" />
+    <Compile Include="Entities\Cause\Méthodes\ParamCreationCauseDTO.cs" />
+    <Compile Include="Entities\Client\ClientDTO.cs" />
+    <Compile Include="Entities\Client\CritereClientDTO.cs" />
+    <Compile Include="Entities\CodeAffaire\CodeAffaireDTO.cs" />
+    <Compile Include="Entities\CodeAffaire\CritereCodeAffaireDTO.cs" />
+    <Compile Include="Entities\CodeContrat\CodeContratDTO.cs" />
+    <Compile Include="Entities\CodeContrat\CritereCodeContratDTO.cs" />
+    <Compile Include="Entities\Commentaire\CommentaireDTO.cs" />
+    <Compile Include="Entities\Commentaire\CritereCommentaireDTO.cs" />
+    <Compile Include="Entities\Commentaire\Methodes\ParamCommentaireDTO.cs" />
+    <Compile Include="Entities\Composant\ComposantDTO.cs" />
+    <Compile Include="Entities\Composant\CritereComposantDTO.cs" />
+    <Compile Include="Entities\Composant\Methodes\ParamCreationComposantDTO.cs" />
+    <Compile Include="Entities\Customer\CritereCustomerDTO.cs" />
+    <Compile Include="Entities\Customer\CustomerDTO.cs" />
+    <Compile Include="Entities\CustomField\CritereCustomFieldDTO.cs" />
+    <Compile Include="Entities\CustomField\CustomFieldDTO.cs" />
+    <Compile Include="Entities\DetailType\CritereDetailTypeDTO.cs" />
+    <Compile Include="Entities\DetailType\DetailTypeDTO.cs" />
+    <Compile Include="Entities\DetailType\Methodes\ParamCreationDetailTypeDTO.cs" />
+    <Compile Include="Entities\Groupe\CritereGroupeDTO.cs" />
+    <Compile Include="Entities\Groupe\GroupeDTO.cs" />
+    <Compile Include="Entities\Groupe\Méthodes\ParamCreationGroupeDTO.cs" />
+    <Compile Include="Entities\HoraireJour\CritereHoraireJourDTO.cs" />
+    <Compile Include="Entities\HoraireJour\HoraireJourDTO.cs" />
+    <Compile Include="Entities\HoraireJour\Méthodes\ParamCreationHoraireJourDTO.cs" />
+    <Compile Include="Entities\HoraireUser\CritereHoraireUserDTO.cs" />
+    <Compile Include="Entities\HoraireUser\HoraireUserDTO.cs" />
+    <Compile Include="Entities\HoraireUser\Méthodes\ParamCreationHoraireUserDTO.cs" />
+    <Compile Include="Entities\KeyWord\CritereKeyWordDTO.cs" />
+    <Compile Include="Entities\KeyWord\KeyWordDTO.cs" />
+    <Compile Include="Entities\KeyWord\Methodes\ParamCreationKeyWordDTO.cs" />
+    <Compile Include="Entities\MAJTicket\CritereMAJTicketDTO.cs" />
+    <Compile Include="Entities\MAJTicket\MAJTicketDTO.cs" />
+    <Compile Include="Entities\Projet\CritereProjetDTO.cs" />
+    <Compile Include="Entities\Projet\Methodes\ParamCreationProjetDTO.cs" />
+    <Compile Include="Entities\Projet\ProjetDTO.cs" />
+    <Compile Include="Entities\Raison\CritereRaisonDTO.cs" />
+    <Compile Include="Entities\Raison\RaisonDTO.cs" />
+    <Compile Include="Entities\Resolution\CritereResolutionDTO.cs" />
+    <Compile Include="Entities\Resolution\Methodes\ParamResolutionDTO.cs" />
+    <Compile Include="Entities\Resolution\ResolutionDTO.cs" />
+    <Compile Include="Entities\Restriction\CritereRestrictionDTO.cs" />
+    <Compile Include="Entities\Restriction\RestrictionDTO.cs" />
+    <Compile Include="Entities\Softlog\CritereSoftlogDTO.cs" />
+    <Compile Include="Entities\Softlog\SoftlogDTO.cs" />
+    <Compile Include="Entities\SousTache\CritereSousTacheDTO.cs" />
+    <Compile Include="Entities\SousTache\SousTacheDTO.cs" />
+    <Compile Include="Entities\Statut\CritereStatutDTO.cs" />
+    <Compile Include="Entities\Statut\Méthodes\ParamUpdateStatutDTO.cs" />
+    <Compile Include="Entities\Statut\StatutDTO.cs" />
+    <Compile Include="Entities\Tache\CritereTacheDTO.cs" />
+    <Compile Include="Entities\Tache\TacheDTO.cs" />
+    <Compile Include="Entities\TempsMort\TempsMortDTO.cs" />
+    <Compile Include="Entities\Temps\TempsDTO.cs" />
+    <Compile Include="Entities\Temps\TimeTrackingDTO.cs" />
+    <Compile Include="Entities\TicketLien\CritereTicketLienDTO.cs" />
+    <Compile Include="Entities\TicketLien\Méthodes\ParamCreationTicketLienDTO.cs" />
+    <Compile Include="Entities\TicketLien\TicketLienDTO.cs" />
+    <Compile Include="Entities\Ticket\CritereTicketDTO.cs" />
+    <Compile Include="Entities\Ticket\Methodes\ParamCreationClarteDTO.cs" />
+    <Compile Include="Entities\Ticket\Methodes\ParamCreationTicketDTO.cs" />
+    <Compile Include="Entities\Ticket\Methodes\ParamGetTicketDTO.cs" />
+    <Compile Include="Entities\Ticket\Methodes\ParamUpdateTicketDTO.cs" />
+    <Compile Include="Entities\Ticket\TicketDTO.cs" />
+    <Compile Include="Entities\TimeGemAcces\CritereTimeGemAccesDTO.cs" />
+    <Compile Include="Entities\TimeGemAcces\Méthodes\ParamCreationTimeGemAccesDTO.cs" />
+    <Compile Include="Entities\TimeGemAcces\TimeGemAccesDTO.cs" />
+    <Compile Include="Entities\TimeTracking\CritereTimeTrackingDTO.cs" />
+    <Compile Include="Entities\TimeTracking\Méthodes\ParamTimeTrackingDTO.cs" />
+    <Compile Include="Entities\TimeTracking\Méthodes\ParamTotalLoggedDTO.cs" />
+    <Compile Include="Entities\TimeTracking\TimeTrackingDTO.cs" />
+    <Compile Include="Entities\TimeType\CritereTimeTypeDTO.cs" />
+    <Compile Include="Entities\TimeType\Méthodes\ParamTimeTypeDTO.cs" />
+    <Compile Include="Entities\TimeType\TimeTypeDTO.cs" />
+    <Compile Include="Entities\TypeStatutProgress\CritereStatutProgressDTO.cs" />
+    <Compile Include="Entities\TypeStatutProgress\StatutProgressDTO.cs" />
+    <Compile Include="Entities\Type\TypeDTO.cs" />
+    <Compile Include="Entities\User\CritereUserDTO.cs" />
+    <Compile Include="Entities\User\UserDTO.cs" />
+    <Compile Include="Entities\VersionAffected\CritereVersionAffectedDTO.cs" />
+    <Compile Include="Entities\VersionAffected\Methodes\ParamCreationVersionAffectedDTO.cs" />
+    <Compile Include="Entities\VersionAffected\VersionAffectedDTO.cs" />
+    <Compile Include="Entities\Version\CritereVersionDTO.cs" />
+    <Compile Include="Entities\Version\Methodes\ParamCreationVersionDTO.cs" />
+    <Compile Include="Entities\Version\VersionDTO.cs" />
+    <Compile Include="Enum\Module\EModule.cs" />
+    <Compile Include="Exception\BaseDTOException.cs" />
+    <Compile Include="Exception\CustomerException\CustomerException.cs" />
+    <Compile Include="Exception\GeneriqueException\TypeException.cs" />
+    <Compile Include="Exception\SoftlogException\SoftlogException.cs" />
+    <Compile Include="Exception\UserException\UserException.cs" />
+    <Compile Include="Helper\DTOSerializerHelper.cs" />
+    <Compile Include="Helper\ExceptionToExceptionDTOHelper.cs" />
+    <Compile Include="Info\InfoSessionDTO.cs" />
+    <Compile Include="Methodes\MethodDTO.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Framework\Framework.csproj">
+      <Project>{add921a7-7803-4419-99ff-bf39961587ec}</Project>
+      <Name>Framework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Entities\CustomField\Methodes\" />
+    <Folder Include="Function\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -3,7 +3,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Runtime.Serialization;
 
-namespace DTOLibrary.Entities.HoraireUser
+namespace WS_Hotline.DTOLibrary.Entities.HoraireUser
 {
     /// <summary>
     /// Classe de gestion des critères pour les horairesUser DTO

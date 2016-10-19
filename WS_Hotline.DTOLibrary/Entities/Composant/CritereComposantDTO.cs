@@ -5,7 +5,7 @@ using WS_Hotline.DTOLibrary.Entities.Authentification;
 using WS_Hotline.DTOLibrary.Entities.Ticket;
 using System.Diagnostics;
 
-namespace DTOLibrary.Entities.Composant
+namespace WS_Hotline.DTOLibrary.Entities.Composant
 {
     /// <summary>
     /// Classe de critère sur la recherche des composants

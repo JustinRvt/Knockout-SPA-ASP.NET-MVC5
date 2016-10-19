@@ -2,8 +2,10 @@
 using System.Diagnostics;
 using System.Linq;
 using System.Runtime.Serialization;
+using WS_Hotline.Framework.Domain.Command;
 
-namespace DTOLibrary.Entities.TimeGemAcces
+
+namespace WS_Hotline.DTOLibrary.Entities.TimeGemAcces
 {
     /// <summary>
     /// Classe pour la gestion des accès aux fonctionnalitées du logiciel

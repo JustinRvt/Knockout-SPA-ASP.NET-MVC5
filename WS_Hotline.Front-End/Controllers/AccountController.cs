@@ -11,8 +11,6 @@ using Microsoft.Owin.Security;
 using Front_End.Models;
 using Countersoft.Gemini.Api;
 using Countersoft.Gemini.Commons.Dto;
-using WS_Hotline.DTOLibrary;
-using WS_Hotline.DTOLibrary.Entities.Authentification;
 
 namespace Front_End.Controllers
 {
@@ -70,7 +68,7 @@ namespace Front_End.Controllers
     /// <remarks>[jravat] - [19102016] </remarks>
     /// 
 
-      private ServiceManager AuthProcess()
+    //private ServiceManager AuthProcess();
 
     // The Authorize Action is the end point which gets called when you access any
     // protected Web API. If the user is not logged in then they will be redirected to 
@@ -215,18 +213,6 @@ namespace Front_End.Controllers
         {
           return View("ExternalLoginFailure");
         }
-        var user = new ApplicationUser { UserName = model.Email, Email = model.Email, Hometown = model.Hometown };
-        var result = await UserManager.CreateAsync(user);
-        if (result.Succeeded)
-        {
-          result = await UserManager.AddLoginAsync(user.Id, info.Login);
-          if (result.Succeeded)
-          {
-            await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
-            return RedirectToLocal(returnUrl);
-          }
-        }
-        AddErrors(result);
       }
 
       ViewBag.ReturnUrl = returnUrl;
@@ -240,7 +226,7 @@ namespace Front_End.Controllers
     public ActionResult LogOff()
     {
       AuthenticationManager.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
-      return RedirectToAction("Index", "Home");_userManager
+      return RedirectToAction("Index", "Home");// _userManager;
     }
 
     //
@@ -255,12 +241,7 @@ namespace Front_End.Controllers
     {
       if (disposing)
       {
-        if (_userManager != null)
-        {
-          _userManager.Dispose();
-          _userManager = null;
-        }
-
+        
         if (_signInManager != null)
         {
           _signInManager.Dispose();

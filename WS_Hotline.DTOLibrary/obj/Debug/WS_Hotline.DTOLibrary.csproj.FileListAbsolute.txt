@@ -1,1 +1,3 @@
 C:\Tortoise Local\Dev-WS_Hotline\WS_Hotline.DTOLibrary\obj\Debug\WS_Hotline.DTOLibrary.csprojResolveAssemblyReference.cache
+C:\Tortoise Local\Dev-WS_Hotline\WS_Hotline.DTOLibrary\obj\Debug\WS_Hotline.DTOLibrary.dll
+C:\Tortoise Local\Dev-WS_Hotline\WS_Hotline.DTOLibrary\obj\Debug\WS_Hotline.DTOLibrary.pdb

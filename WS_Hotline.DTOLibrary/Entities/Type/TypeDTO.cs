@@ -5,7 +5,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
 
-namespace DTOLibrary.Entities.Type
+namespace WS_Hotline.DTOLibrary.Entities.Type
 {
     /// <summary>
     /// Classe permettant de gérer le type d'un ticket

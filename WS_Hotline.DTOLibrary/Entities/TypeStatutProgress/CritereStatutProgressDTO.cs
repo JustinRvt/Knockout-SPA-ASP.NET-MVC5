@@ -5,7 +5,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
 
-namespace DTOLibrary.Entities.TypeStatutProgress
+namespace WS_Hotline.DTOLibrary.Entities.TypeStatutProgress
 {
     /// <summary>
     /// Classe de critère pour la recherche des StatutProgressDTO

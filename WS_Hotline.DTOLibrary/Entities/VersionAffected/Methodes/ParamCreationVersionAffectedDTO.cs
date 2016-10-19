@@ -6,7 +6,7 @@ using WS_Hotline.DTOLibrary.Entities.Cause;
 using WS_Hotline.DTOLibrary.Entities.Ticket;
 using System.Diagnostics;
 
-namespace DTOLibrary.Entities.Version.Methodes
+namespace WS_Hotline.DTOLibrary.Entities.Version.Methodes
 {
     /// <summary>
     /// Classe de paramètre pour la création d'une version affected

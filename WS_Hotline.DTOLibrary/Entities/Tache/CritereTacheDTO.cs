@@ -5,7 +5,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
 
-namespace DTOLibrary.Entities.Tache
+namespace WS_Hotline.DTOLibrary.Entities.Tache
 {
     public class CritereTacheDTO : CritereBaseDTO
     {

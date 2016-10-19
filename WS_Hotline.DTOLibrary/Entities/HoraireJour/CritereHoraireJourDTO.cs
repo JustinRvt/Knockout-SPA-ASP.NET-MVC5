@@ -3,7 +3,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Runtime.Serialization;
 
-namespace DTOLibrary.Entities.HoraireJour
+namespace WS_Hotline.DTOLibrary.Entities.HoraireJour
 {
     /// <summary>
     /// Classe de critères pour les objects de type HoraireJourDTO

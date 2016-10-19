@@ -6,7 +6,7 @@ using System.Text;
 using WS_Hotline.DTOLibrary.Entities.Authentification;
 using System.Diagnostics;
 
-namespace DTOLibrary.Entities.Commentaire
+namespace WS_Hotline.DTOLibrary.Entities.Commentaire
 {
     //jc- Classe de critère pour CommentaireDTO
     [DataContract]

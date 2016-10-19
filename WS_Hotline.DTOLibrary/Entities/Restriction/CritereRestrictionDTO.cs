@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace DTOLibrary.Entities.Restriction
+namespace WS_Hotline.DTOLibrary.Entities.Restriction
 {
     /// <summary>
     /// Classe de critère lors de la récupération des restrictions

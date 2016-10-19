@@ -5,7 +5,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
 
-namespace DTOLibrary.Entities.SousTache
+namespace WS_Hotline.DTOLibrary.Entities.SousTache
 {
 
     [DebuggerDisplay("ID Tache Hors Ticket = {IdTacheHorsTicket} - ID Composant = {ComposantId}")]

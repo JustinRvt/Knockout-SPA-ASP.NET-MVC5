@@ -6,8 +6,10 @@ using System.Runtime.Serialization;
 using System.Text;
 using WS_Hotline.DTOLibrary.Entities.TimeTracking;
 using System.Diagnostics;
+using WS_Hotline.Framework.Domain.Command;
 
-namespace DTOLibrary.Entities.Temps
+
+namespace WS_Hotline.DTOLibrary.Entities.Temps
 {
     /// <summary>
     /// Classe permettant de gérer les temps d'un ticket

@@ -3,7 +3,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Runtime.Serialization;
 
-namespace DTOLibrary.Entities.TimeGemAcces
+namespace WS_Hotline.DTOLibrary.Entities.TimeGemAcces
 {
     /// <summary>
     /// Classe de critères pour les objects de type TimeGemAccesDTO

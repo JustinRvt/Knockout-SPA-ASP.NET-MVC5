@@ -7,7 +7,7 @@ using WS_Hotline.DTOLibrary.Entities.Authentification;
 using WS_Hotline.DTOLibrary.Entities.Ticket;
 using System.Diagnostics;
 
-namespace DTOLibrary.Entities.Statut
+namespace WS_Hotline.DTOLibrary.Entities.Statut
 {
     /// <summary>
     /// Classe de critères sur la recherche des statuts

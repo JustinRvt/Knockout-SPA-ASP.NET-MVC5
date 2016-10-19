@@ -7,8 +7,10 @@ using WS_Hotline.DTOLibrary.Entities.Authentification;
 using WS_Hotline.DTOLibrary.Entities.Ticket;
 using WS_Hotline.DTOLibrary.Entities.TimeType;
 using System.Diagnostics;
+using WS_Hotline.Framework.Domain.Command;
 
-namespace DTOLibrary.Entities.TimeTracking.Méthodes
+
+namespace WS_Hotline.DTOLibrary.Entities.TimeTracking.Méthodes
 {
     /// <summary>
     /// Classe contenant les paramètres nécessaires pour les MAJ et création de Time Tracking

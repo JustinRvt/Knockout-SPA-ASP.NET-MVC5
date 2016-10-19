@@ -4,8 +4,9 @@ using System.Diagnostics;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
+using WS_Hotline.Framework.Domain.Command;
 
-namespace DTOLibrary.Entities.Cause
+namespace WS_Hotline.DTOLibrary.Entities.Cause
 {
     /// <summary>
     /// Classe de DTO pour les causes de blocage des tickets

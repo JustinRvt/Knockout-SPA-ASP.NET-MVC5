@@ -6,7 +6,7 @@ using WS_Hotline.DTOLibrary.Entities.Authentification;
 using WS_Hotline.DTOLibrary.Entities.Ticket;
 using System.Diagnostics;
 
-namespace DTOLibrary.Entities.Groupe
+namespace WS_Hotline.DTOLibrary.Entities.Groupe
 {
     //jc- classe de critère pour GroupeDTO
     [DebuggerDisplay("ID Groupe = {IdGroupe} - Nom Groupe = {GroupeNom} - User = {User.Login} - ID Ticket = {Ticket.IdTicket}")]

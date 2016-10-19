@@ -5,8 +5,10 @@ using WS_Hotline.DTOLibrary.Entities.Authentification;
 using WS_Hotline.DTOLibrary.Entities.Cause;
 using WS_Hotline.DTOLibrary.Entities.Ticket;
 using System.Diagnostics;
+using WS_Hotline.Framework.Domain.Command;
 
-namespace DTOLibrary.Entities.DetailType.Methodes
+
+namespace WS_Hotline.DTOLibrary.Entities.DetailType.Methodes
 {
     /// <summary>
     /// Classe de param pour la création d'un type detail DTO

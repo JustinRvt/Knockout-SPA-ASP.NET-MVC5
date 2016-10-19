@@ -5,8 +5,10 @@ using WS_Hotline.DTOLibrary.Entities.Authentification;
 using WS_Hotline.DTOLibrary.Entities.Commentaire;
 using WS_Hotline.DTOLibrary.Entities.Ticket;
 using System.Diagnostics;
+using WS_Hotline.Framework.Domain.Command;
 
-namespace DTOLibrary.Entities.TicketLien.Méthodes
+
+namespace WS_Hotline.DTOLibrary.Entities.TicketLien.Méthodes
 {
     [DebuggerDisplay("User = {User.Login} - ID Ticket = {Ticket.IdTicket}")]
     [DataContract]

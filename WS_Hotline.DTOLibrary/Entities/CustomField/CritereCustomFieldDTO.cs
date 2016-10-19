@@ -5,7 +5,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
 
-namespace DTOLibrary.Entities.CustomField
+namespace WS_Hotline.DTOLibrary.Entities.CustomField
 {
     /// <summary>
     /// Classe de critère sur la recherche des customFields

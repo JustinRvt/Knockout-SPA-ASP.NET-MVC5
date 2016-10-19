@@ -7,7 +7,7 @@ using WS_Hotline.DTOLibrary.Entities.Authentification;
 using WS_Hotline.DTOLibrary.Entities.Ticket;
 using System.Diagnostics;
 
-namespace DTOLibrary.Entities.TimeType.Méthodes
+namespace WS_Hotline.DTOLibrary.Entities.TimeType.Méthodes
 {
     /// <summary>
     /// Classe contenant les paramètres nécessaires pour les MAJ et création de time type

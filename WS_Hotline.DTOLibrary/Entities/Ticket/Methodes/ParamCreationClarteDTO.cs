@@ -3,8 +3,10 @@ using System.Linq;
 using System.Runtime.Serialization;
 using WS_Hotline.DTOLibrary.Entities.Authentification;
 using System.Diagnostics;
+using WS_Hotline.Framework.Domain.Command;
 
-namespace DTOLibrary.Entities.Ticket.Methodes
+
+namespace WS_Hotline.DTOLibrary.Entities.Ticket.Methodes
 {
     /// <summary>
     /// Classe de param pour la gestion de la création de clarté tickets

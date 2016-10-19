@@ -6,7 +6,7 @@ using System.Text;
 using WS_Hotline.DTOLibrary.Entities.Authentification;
 using System.Diagnostics;
 
-namespace DTOLibrary.Entities.TimeTracking
+namespace WS_Hotline.DTOLibrary.Entities.TimeTracking
 {
     /// <summary>
     /// Classe de critère pour TimeTrackingDTO

@@ -3,7 +3,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Runtime.Serialization;
 
-namespace DTOLibrary.Entities.KeyWord
+namespace WS_Hotline.DTOLibrary.Entities.KeyWord
 {
     //jc- classe de critère pour KeyWordDTO
     [DebuggerDisplay("ID KeyWord = {IdKeyWord} - Nom KeyWord = {NomKeyWord}")]

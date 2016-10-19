@@ -5,7 +5,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
 
-namespace DTOLibrary.Entities.Cause
+namespace WS_Hotline.DTOLibrary.Entities.Cause
 {
     //jc- classe de critère pour CritereDetailTypeDTO
     [DebuggerDisplay("ID DetailType = {IdDetailType} - Nom DetailType = {NomDetailType}")]

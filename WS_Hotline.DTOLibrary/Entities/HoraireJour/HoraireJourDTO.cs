@@ -2,8 +2,10 @@
 using System.Diagnostics;
 using System.Linq;
 using System.Runtime.Serialization;
+using WS_Hotline.Framework.Domain.Command;
 
-namespace DTOLibrary.Entities.HoraireJour
+
+namespace WS_Hotline.DTOLibrary.Entities.HoraireJour
 {
     /// <summary>
     /// Classe pour la gestion des horaires par journées

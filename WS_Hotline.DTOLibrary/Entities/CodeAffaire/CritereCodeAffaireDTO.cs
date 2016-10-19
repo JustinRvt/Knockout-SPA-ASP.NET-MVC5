@@ -5,7 +5,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
 
-namespace DTOLibrary.Entities.CodeAffaire
+namespace WS_Hotline.DTOLibrary.Entities.CodeAffaire
 {
     public class CritereCodeAffaireDTO : CritereBaseDTO
     {

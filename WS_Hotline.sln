@@ -29,7 +29,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestDAL", "UnitTestDAL\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Framework", "Framework\Framework.csproj", "{ADD921A7-7803-4419-99FF-BF39961587EC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WS_Hotline.DTOLibrary", "WS_Hotline.DTOLibrary\WS_Hotline.DTOLibrary.csproj", "{7CD234CA-43B2-49F1-9BE4-DE8F298232F4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTOLibrary", "WS_Hotline.DTOLibrary\DTOLibrary.csproj", "{7CD234CA-43B2-49F1-9BE4-DE8F298232F4}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "00 - Architecture", "00 - Architecture", "{E95DAA8C-AC4C-4969-B157-F8B6E673BF2B}"
 	ProjectSection(SolutionItems) = preProject

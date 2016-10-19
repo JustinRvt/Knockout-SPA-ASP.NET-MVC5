@@ -10,8 +10,9 @@ using WS_Hotline.DTOLibrary.Entities.Groupe;
 using WS_Hotline.DTOLibrary.Entities.HoraireUser;
 using WS_Hotline.DTOLibrary.Entities.TimeGemAcces;
 using System.Diagnostics;
+using WS_Hotline.Framework.Domain.Command;
 
-namespace DTOLibrary.Entities.Authentification
+namespace WS_Hotline.DTOLibrary.Entities.Authentification
 {
     /// <summary>
     /// Classe permettant la gestion de l'authentification

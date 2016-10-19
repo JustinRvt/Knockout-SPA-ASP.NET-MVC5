@@ -4,8 +4,10 @@ using System.Diagnostics;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
+using WS_Hotline.Framework.Domain.Command;
 
-namespace DTOLibrary.Entities.Composant
+
+namespace WS_Hotline.DTOLibrary.Entities.Composant
 {
     /// <summary>
     /// Classe permettant la gestion des composants

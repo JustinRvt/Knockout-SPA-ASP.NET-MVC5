@@ -7,7 +7,7 @@ using WS_Hotline.DTOLibrary.Entities.Authentification;
 using WS_Hotline.DTOLibrary.Entities.Ticket;
 using System.Diagnostics;
 
-namespace DTOLibrary.Entities.Resolution
+namespace WS_Hotline.DTOLibrary.Entities.Resolution
 {
     //jc- classe de critère pour ResolutionDTO
     [DebuggerDisplay("ID Resolution {IdResolution} - Sequencement = {Seq} - Libelle Resolution = {ResolutionLibelle}")]

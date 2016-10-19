@@ -4,8 +4,10 @@ using System.Diagnostics;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
+using WS_Hotline.Framework.Domain.Command;
 
-namespace DTOLibrary.Entities.Client
+
+namespace WS_Hotline.DTOLibrary.Entities.Client
 {
     /// <summary>
     /// Classe correspondant à un client

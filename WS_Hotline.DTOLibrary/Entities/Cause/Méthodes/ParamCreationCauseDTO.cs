@@ -6,8 +6,10 @@ using System.Text;
 using WS_Hotline.DTOLibrary.Entities.Authentification;
 using WS_Hotline.DTOLibrary.Entities.Ticket;
 using System.Diagnostics;
+using WS_Hotline.Framework.Domain.Command;
 
-namespace DTOLibrary.Entities.Cause.Méthodes
+
+namespace WS_Hotline.DTOLibrary.Entities.Cause.Méthodes
 {
     /// <summary>
     /// Classe de paramètre pour la création d'une cause

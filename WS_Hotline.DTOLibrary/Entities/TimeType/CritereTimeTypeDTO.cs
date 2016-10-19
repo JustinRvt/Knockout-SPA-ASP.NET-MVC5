@@ -7,7 +7,7 @@ using WS_Hotline.DTOLibrary.Entities.Authentification;
 using WS_Hotline.DTOLibrary.Entities.Ticket;
 using System.Diagnostics;
 
-namespace DTOLibrary.Entities.TimeType
+namespace WS_Hotline.DTOLibrary.Entities.TimeType
 {
     //jc- classe de critères pour TimeTypeDTO
     [DebuggerDisplay("ID Time Type = {IdTimeType} - Nom Time Type = {NomTimeType} - Sequencement = {Seq}")]

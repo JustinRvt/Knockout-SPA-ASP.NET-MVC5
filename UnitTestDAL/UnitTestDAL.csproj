@@ -73,9 +73,9 @@
       <Project>{5b430d82-5023-4325-8147-11616e3beecc}</Project>
       <Name>DataAccessLayer</Name>
     </ProjectReference>
-    <ProjectReference Include="..\WS_Hotline.DTOLibrary\WS_Hotline.DTOLibrary.csproj">
+    <ProjectReference Include="..\WS_Hotline.DTOLibrary\DTOLibrary.csproj">
       <Project>{7cd234ca-43b2-49f1-9be4-de8f298232f4}</Project>
-      <Name>WS_Hotline.DTOLibrary</Name>
+      <Name>DTOLibrary</Name>
     </ProjectReference>
     <ProjectReference Include="..\Framework\Framework.csproj">
       <Project>{add921a7-7803-4419-99ff-bf39961587ec}</Project>

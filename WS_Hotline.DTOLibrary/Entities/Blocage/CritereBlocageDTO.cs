@@ -6,7 +6,7 @@ using System.Text;
 using WS_Hotline.DTOLibrary.Entities.Ticket;
 using System.Diagnostics;
 
-namespace DTOLibrary.Entities.Blocage
+namespace WS_Hotline.DTOLibrary.Entities.Blocage
 {
     //jc- classe de crièteres pour BlocageDTO
     [DebuggerDisplay("Nom Ticket = {Ticket.NomTicket}")]

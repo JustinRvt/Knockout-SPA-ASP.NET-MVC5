@@ -10,8 +10,10 @@ using WS_Hotline.DTOLibrary.Entities.Client;
 using WS_Hotline.DTOLibrary.Entities.Version;
 using WS_Hotline.DTOLibrary.Entities.TimeType;
 using System.Diagnostics;
+using WS_Hotline.Framework.Domain.Command;
 
-namespace DTOLibrary.Entities.MAJTicket
+
+namespace WS_Hotline.DTOLibrary.Entities.MAJTicket
 {
     [DebuggerDisplay("ID CurrentTicket = {CurrentTicket.IdTicket} - Titre CurrentRaison = {CurrentRaison.TitreRaison} - Identifiant CurrentClient = {CurrentClient.Identifiant}")]
     [DataContract]
@@ -155,7 +157,7 @@ namespace DTOLibrary.Entities.MAJTicket
             Validator.ValidateProperty(this.CurrentTicket, new ValidationContext(this, null, null) { MemberName = "CurrentTicket" });
             Validator.ValidateProperty(this.CurrentRaison, new ValidationContext(this, null, null) { MemberName = "CurrentRaison" });
             Validator.ValidateProperty(this.CurrentClient, new ValidationContext(this, null, null) { MemberName = "CurrentClient" });
-            
+
             //jc- on ne controle le nombre de minutes saisies par l'utilisateur que si différent de vide
             if(this.NbMinutesSaisies != "")
                 Validator.ValidateProperty(this.NbMinutesSaisies, new ValidationContext(this, null, null) { MemberName = "NbMinutesSaisies" });

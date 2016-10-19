@@ -3,7 +3,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Runtime.Serialization;
 
-namespace DTOLibrary.Entities.Version
+namespace WS_Hotline.DTOLibrary.Entities.Version
 {
     /// <summary>
     /// Classe de DTO pour les versions affected

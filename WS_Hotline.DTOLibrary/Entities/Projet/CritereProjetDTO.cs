@@ -6,7 +6,7 @@ using WS_Hotline.DTOLibrary.Entities.Authentification;
 using WS_Hotline.DTOLibrary.Entities.Ticket;
 using System.Diagnostics;
 
-namespace DTOLibrary.Entities.Projet
+namespace WS_Hotline.DTOLibrary.Entities.Projet
 {
     /// <summary>
     /// Classe de critère sur la recherche des projets

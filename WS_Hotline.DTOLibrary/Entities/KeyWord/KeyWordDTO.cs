@@ -2,8 +2,10 @@
 using System.Diagnostics;
 using System.Linq;
 using System.Runtime.Serialization;
+using WS_Hotline.Framework.Domain.Command;
 
-namespace DTOLibrary.Entities.KeyWord
+
+namespace WS_Hotline.DTOLibrary.Entities.KeyWord
 {
     /// <summary>
     /// Classe de DTO pour les mots clés

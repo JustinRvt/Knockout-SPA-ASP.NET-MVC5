@@ -3,3 +3,4 @@ C:\Tortoise Local\WS_Hotline\TemplateT4\bin\Debug\TemplateT4.pdb
 C:\Tortoise Local\WS_Hotline\TemplateT4\obj\Debug\TemplateT4.csprojResolveAssemblyReference.cache
 C:\Tortoise Local\WS_Hotline\TemplateT4\obj\Debug\TemplateT4.dll
 C:\Tortoise Local\WS_Hotline\TemplateT4\obj\Debug\TemplateT4.pdb
+C:\Tortoise Local\Dev-WS_Hotline\TemplateT4\obj\Debug\TemplateT4.csprojResolveAssemblyReference.cache

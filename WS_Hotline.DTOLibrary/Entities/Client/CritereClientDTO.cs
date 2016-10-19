@@ -5,7 +5,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
 
-namespace DTOLibrary.Entities.Client
+namespace WS_Hotline.DTOLibrary.Entities.Client
 {
     /// <summary>
     /// Classe de critère pour les clients

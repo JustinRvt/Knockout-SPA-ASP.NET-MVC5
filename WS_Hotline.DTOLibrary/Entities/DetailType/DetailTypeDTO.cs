@@ -2,8 +2,10 @@
 using System.Diagnostics;
 using System.Linq;
 using System.Runtime.Serialization;
+using WS_Hotline.Framework.Domain.Command;
 
-namespace DTOLibrary.Entities.DetailType
+
+namespace WS_Hotline.DTOLibrary.Entities.DetailType
 {
     /// <summary>
     /// Classe de DTO pour la gestion des DetailTypeDTO

@@ -9,7 +9,7 @@ using System.Text;
 using WS_Hotline.DTOLibrary.Entities.Resolution;
 using System.Diagnostics;
 
-namespace DTOLibrary.Entities.TypeStatutProgress
+namespace WS_Hotline.DTOLibrary.Entities.TypeStatutProgress
 {
     /// <summary>
     /// Classe permettant de gérer les statuts en cours

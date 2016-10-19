@@ -5,7 +5,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
 
-namespace DTOLibrary.Entities.TimeType
+namespace WS_Hotline.DTOLibrary.Entities.TimeType
 {
     [DebuggerDisplay("ID Time Type = {IdTimeType} - Nom Time Type = {NomTimeType} - Sequencement = {Seq}")]
     [DataContract]

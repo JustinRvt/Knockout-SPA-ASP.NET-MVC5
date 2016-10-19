@@ -5,7 +5,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
 
-namespace DTOLibrary.Entities.Raison
+namespace WS_Hotline.DTOLibrary.Entities.Raison
 {
     //jc- Classe de critère pour RaisonDTO
     [DebuggerDisplay("ID Raison = {IdRaison} - Titre Raison = {TitreRaison} - Ordre Raison = {OrdreRaison}")]

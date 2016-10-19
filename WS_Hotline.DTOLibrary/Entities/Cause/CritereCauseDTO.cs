@@ -5,7 +5,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
 
-namespace DTOLibrary.Entities.Cause
+namespace WS_Hotline.DTOLibrary.Entities.Cause
 {
     //jc- classe de critère pour CauseDTO
     [DebuggerDisplay("ID Cause = {IdCause} - Nom Cause = {NomCause} - Service Cause = {ServiceCause}")]

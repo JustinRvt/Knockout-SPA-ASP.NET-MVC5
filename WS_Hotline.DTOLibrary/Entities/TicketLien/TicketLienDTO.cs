@@ -4,8 +4,10 @@ using System.Diagnostics;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
+using WS_Hotline.Framework.Domain.Command;
 
-namespace DTOLibrary.Entities.TicketLien
+
+namespace WS_Hotline.DTOLibrary.Entities.TicketLien
 {
     [DebuggerDisplay("ID Ticket = {TicketId} - ID SecondTicket = {SecondTicketId} - Date de Creation = {Creation}")]
     [DataContract]

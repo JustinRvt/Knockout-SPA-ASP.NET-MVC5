@@ -6,8 +6,10 @@ using System.Diagnostics;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
+using WS_Hotline.Framework.Domain.Command;
 
-namespace DTOLibrary.Entities.Statut.Méthodes
+
+namespace WS_Hotline.DTOLibrary.Entities.Statut.Méthodes
 {
     /// <summary>
     /// Classe contenant les paramètres nécessaires

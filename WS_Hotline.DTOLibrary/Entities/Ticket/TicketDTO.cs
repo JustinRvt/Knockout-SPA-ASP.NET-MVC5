@@ -21,8 +21,9 @@ using WS_Hotline.DTOLibrary.Entities.CodeContrat;
 using WS_Hotline.DTOLibrary.Entities.Authentification;
 using WS_Hotline.DTOLibrary.Entities.CodeAffaire;
 using System.Diagnostics;
+using WS_Hotline.Framework.Domain.Command;
 
-namespace DTOLibrary.Entities.Ticket
+namespace WS_Hotline.DTOLibrary.Entities.Ticket
 {
     /// <summary>
     /// Classe permettant la gestion des tickets

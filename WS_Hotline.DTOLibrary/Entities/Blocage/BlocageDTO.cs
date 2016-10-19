@@ -15,8 +15,9 @@ using WS_Hotline.DTOLibrary.Entities.TimeType;
 using WS_Hotline.DTOLibrary.Helper;
 using WS_Hotline.DTOLibrary.Entities.TypeStatutProgress;
 using System.Diagnostics;
+using WS_Hotline.Framework.Domain.Command;
 
-namespace DTOLibrary.Entities.Blocage
+namespace WS_Hotline.DTOLibrary.Entities.Blocage
 {
     [DebuggerDisplay("ID Ticket = {CurrentTicket.IdTicket} - ID Cause = {CurrentCause.IdCause} - Libelle Statut = {CurrentStatut.LibelleStatut}")]
     [DataContract]

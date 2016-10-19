@@ -5,7 +5,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
 
-namespace DTOLibrary.Entities.Authentification
+namespace WS_Hotline.DTOLibrary.Entities.Authentification
 {
     /// <summary>
     /// Classe de critères pour les DTO de type Authentification

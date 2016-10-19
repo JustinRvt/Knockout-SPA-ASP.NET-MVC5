@@ -2,8 +2,10 @@
 using System.Diagnostics;
 using System.Linq;
 using System.Runtime.Serialization;
+using WS_Hotline.Framework.Domain.Command;
 
-namespace DTOLibrary.Entities.HoraireUser
+
+namespace WS_Hotline.DTOLibrary.Entities.HoraireUser
 {
     /// <summary>
     /// Classe de gestion des données de type HoraireUserDTO

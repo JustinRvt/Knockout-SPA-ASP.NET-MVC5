@@ -5,7 +5,7 @@ using WS_Hotline.DTOLibrary.Entities.Authentification;
 using WS_Hotline.DTOLibrary.Entities.Ticket;
 using System.Diagnostics;
 
-namespace DTOLibrary.Entities.Version
+namespace WS_Hotline.DTOLibrary.Entities.Version
 {
     //jc- classe de critère pour VersionDTO
     [DebuggerDisplay("ID Version = IdVersion - ID Projet = {IdProjet} - Nom de Version = {VersionName} - Numéro de version = {VersionNumber}")]

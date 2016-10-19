@@ -5,8 +5,10 @@ using WS_Hotline.DTOLibrary.Entities.Authentification;
 using WS_Hotline.DTOLibrary.Entities.Cause;
 using WS_Hotline.DTOLibrary.Entities.Ticket;
 using System.Diagnostics;
+using WS_Hotline.Framework.Domain.Command;
 
-namespace DTOLibrary.Entities.Projet.Methodes
+
+namespace WS_Hotline.DTOLibrary.Entities.Projet.Methodes
 {
     /// <summary>
     /// Classe de paramètre pour la création d'un projet

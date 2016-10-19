@@ -6,8 +6,10 @@ using System.Text;
 using WS_Hotline.DTOLibrary.Entities.Authentification;
 using WS_Hotline.DTOLibrary.Entities.Ticket;
 using System.Diagnostics;
+using WS_Hotline.Framework.Domain.Command;
 
-namespace DTOLibrary.Entities.Commentaire.Methodes
+
+namespace WS_Hotline.DTOLibrary.Entities.Commentaire.Methodes
 {
     /// <summary>
     /// Classe contenant les paramètres nécessaires pour les MAJ et création de commentaires

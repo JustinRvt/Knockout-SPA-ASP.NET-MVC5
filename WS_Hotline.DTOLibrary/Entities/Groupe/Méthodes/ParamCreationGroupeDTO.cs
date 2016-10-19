@@ -6,8 +6,10 @@ using WS_Hotline.DTOLibrary.Entities.Cause;
 using WS_Hotline.DTOLibrary.Entities.Groupe;
 using WS_Hotline.DTOLibrary.Entities.Ticket;
 using System.Diagnostics;
+using WS_Hotline.Framework.Domain.Command;
 
-namespace DTOLibrary.Entities.Groupes.Méthodes
+
+namespace WS_Hotline.DTOLibrary.Entities.Groupes.Méthodes
 {
     /// <summary>
     /// Classe de gestion pour la création des groupes

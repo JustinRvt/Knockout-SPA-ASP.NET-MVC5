@@ -6,7 +6,7 @@ using System.Text;
 using WS_Hotline.DTOLibrary.Entities.Ticket;
 using System.Diagnostics;
 
-namespace DTOLibrary.Entities.MAJTicket
+namespace WS_Hotline.DTOLibrary.Entities.MAJTicket
 {
     //jc- classe de critère pour MAJTicketDTO
     [DebuggerDisplay("ID Ticket = {Ticket.IdTicket} - Nom Ticket = {Ticket.NomTicket}")]

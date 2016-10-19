@@ -6,7 +6,7 @@ using System.Text;
 using WS_Hotline.DTOLibrary.Entities.Authentification;
 using System.Diagnostics;
 
-namespace DTOLibrary.Entities.TicketLien
+namespace WS_Hotline.DTOLibrary.Entities.TicketLien
 {
     [DebuggerDisplay("ID Ticket = {TicketId} - ID SecondTicket = {SecondTicketId} - User = {User.Login}")]
     [DataContract]

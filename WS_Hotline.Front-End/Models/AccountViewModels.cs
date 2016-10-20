@@ -7,9 +7,14 @@ namespace Front_End.Models
   // Modèles renvoyés par les actions AccountController.
   public class ExternalLoginConfirmationViewModel
   {
+    /*
     [Required]
     [Display(Name = "Courrier électronique")]
     public string Email { get; set; }
+    */
+    [Required]
+    [Display(Name ="Utilisateur")]
+    public string Username { get; set; }
 
     [Display(Name = "Ville natale")]
     public string Hometown { get; set; }
@@ -44,12 +49,14 @@ namespace Front_End.Models
     public bool RememberMe { get; set; }
   }
 
+  /*
   public class ForgotViewModel
   {
     [Required]
     [Display(Name = "Courrier électronique")]
     public string Email { get; set; }
   }
+  */
 
   public class LoginViewModel
   {
@@ -57,6 +64,11 @@ namespace Front_End.Models
     [Display(Name = "Courrier électronique")]
     [EmailAddress]
     public string Email { get; set; }
+
+    [Required]
+    [Display(Name = "Utilisateur")]
+    [Username]
+    public string Username { get; set; }
 
     [Required]
     [DataType(DataType.Password)]
@@ -73,6 +85,11 @@ namespace Front_End.Models
     [EmailAddress]
     [Display(Name = "Courrier électronique")]
     public string Email { get; set; }
+
+    [Required]
+    [Username]
+    [Display(Name = "Utilisateur")]
+    public string Username { get; set; }
 
     [Required]
     [StringLength(100, ErrorMessage = "{0} doit contenir au moins {2} caractères.", MinimumLength = 6)]

@@ -53,4 +53,3 @@ C:\Tortoise Local\WS_Hotline\WS_Hotline.DTOLibrary\bin\Debug\fr\System.Web.WebPa
 C:\Tortoise Local\WS_Hotline\WS_Hotline.DTOLibrary\obj\Debug\DTOLibrary.csprojResolveAssemblyReference.cache
 C:\Tortoise Local\WS_Hotline\WS_Hotline.DTOLibrary\obj\Debug\WS_Hotline.DTOLibrary.dll
 C:\Tortoise Local\WS_Hotline\WS_Hotline.DTOLibrary\obj\Debug\WS_Hotline.DTOLibrary.pdb
-C:\Tortoise Local\Dev-WS_Hotline\WS_Hotline.DTOLibrary\obj\Debug\DTOLibrary.csprojResolveAssemblyReference.cache

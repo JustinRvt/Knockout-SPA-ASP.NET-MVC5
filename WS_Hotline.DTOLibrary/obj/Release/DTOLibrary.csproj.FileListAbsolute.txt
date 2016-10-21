@@ -1,5 +1,0 @@
-C:\Tortoise Local\TimeGem\WS_Hotline.DTOLibrary\bin\Release\WS_Hotline.DTOLibrary.dll
-C:\Tortoise Local\TimeGem\WS_Hotline.DTOLibrary\bin\Release\WS_Hotline.DTOLibrary.pdb
-C:\Tortoise Local\TimeGem\WS_Hotline.DTOLibrary\obj\Release\WS_Hotline.DTOLibrary.csprojResolveAssemblyReference.cache
-C:\Tortoise Local\TimeGem\WS_Hotline.DTOLibrary\obj\Release\WS_Hotline.DTOLibrary.dll
-C:\Tortoise Local\TimeGem\WS_Hotline.DTOLibrary\obj\Release\WS_Hotline.DTOLibrary.pdb

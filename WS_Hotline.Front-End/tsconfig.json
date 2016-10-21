@@ -1,0 +1,12 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "target": "es5",
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "module": "amd",
+    "experimentalDecorators": true
+  },
+  "exclude": ["node_modules"],
+  "include": ["src/**/*"]
+}

@@ -8,7 +8,7 @@ using WS_Hotline.DTOLibrary.Entities.Customer;
 
 namespace WS_Hotline.DTOLibrary.Exception.CustomerException
 {
-             /// <summary>
+        /// <summary>
             /// Exception sur le Type NomObject
             /// </summary>
             /// <remarks>jravat - 30092016 - Généré par snippet v1.0 </remarks>

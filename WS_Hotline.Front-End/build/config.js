@@ -4,7 +4,7 @@ var nodes_modules_dir = path.resolve(__dirname, 'nodes_modules');
 // La seule configuration a modifier.
 module.exports = {
     entry: {
-        app: ['./src/js/main.js']
+        app: ['./src/js/main.ts']
     },
     output: {
         path: path.resolve(__dirname, '../dist/assets'), // attention ce dossier sera vidé systématiquement (ne rien y mettre !)

@@ -1,13 +1,11 @@
-require('../css/app')
-let ko = require('knockout')
-let $ = require('jQuery')
-let req = require('requirejs')
-const content = require('../html/index')
-
-document.body.innerHTML = content
-
-$(document).ready(function () {
-  ko.applyBindings({})
+define(['require', 'exports', 'knockout'], function (require, exports, ko) {
+    "use strict"
+    var HelloViewModel = (function () {
+        function HelloViewModel(language, framework) {
+            this.language = ko.observable(language)
+            this.framework = ko.observable(framework)
+        }
+        return HelloViewModel;
+    }())
+    ko.applyBindings(new HelloViewModel('TypeScript', 'Knockout'))
 })
-
-console.log('Webpack loaded')

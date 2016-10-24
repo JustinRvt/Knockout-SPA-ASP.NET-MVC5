@@ -29,9 +29,16 @@
     <Content Include=".travis.yml" />
     <Content Include="package.json" />
     <Content Include="README.md" />
+    <Content Include="packages.config" />
+    <None Include="Scripts\jquery-3.1.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-3.1.1.js" />
+    <Content Include="Scripts\jquery-3.1.1.min.js" />
+    <Content Include="Scripts\jquery-3.1.1.slim.js" />
+    <Content Include="Scripts\jquery-3.1.1.slim.min.js" />
     <Content Include="src\css\app.scss" />
     <Content Include="src\html\index.pug" />
     <Content Include="src\html\test.pug" />
+    <Content Include="src\js\hello\hello.js" />
     <Content Include="tsconfig.json" />
   </ItemGroup>
   <ItemGroup>
@@ -51,12 +58,18 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="web.config" />
+    <Content Include="src\js\hello\hello.js.map" />
+    <Content Include="Scripts\jquery-3.1.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.1.1.min.map" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
     <None Include="web.Release.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="src\js\hello\hello.ts" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">12.0</VisualStudioVersion>

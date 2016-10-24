@@ -1,12 +1,14 @@
 {
   "compileOnSave": true,
   "compilerOptions": {
+    "outDir": "./build",
     "target": "es5",
     "sourceMap": true,
     "noImplicitAny": true,
     "module": "amd",
-    "experimentalDecorators": true
+    "experimentalDecorators": true,
+    "types": ["knockout"]
   },
-  "exclude": ["node_modules"],
+  "exclude": ["node_modules","**/*.spec.ts"],
   "include": ["src/**/*"]
 }

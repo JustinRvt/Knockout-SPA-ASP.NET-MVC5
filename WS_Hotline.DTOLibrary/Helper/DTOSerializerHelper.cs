@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
+using DTOLibrary;
 
 namespace WS_Hotline.DTOLibrary.Helper
 {
@@ -50,14 +51,19 @@ namespace WS_Hotline.DTOLibrary.Helper
             }
         }
 
-        /// <summary>
-        /// Deserialisation d'un xml vers un DTO Specifique.
-        /// </summary>
-        /// <param name="pXml">xml en string</param>
-        /// <param name="dto">Type du DTO Atendu</param>
-        /// <returns>DTO</returns>
-        /// <remarks>LOUIS Yoann 16/06/2015 Version 1.0.1</remarks>
-        public static TIn DeserializeXml<TIn>(string pXml)
+    internal static string SerializeDTO(BaseDTO baseDTO)
+    {
+      throw new NotImplementedException();
+    }
+
+    /// <summary>
+    /// Deserialisation d'un xml vers un DTO Specifique.
+    /// </summary>
+    /// <param name="pXml">xml en string</param>
+    /// <param name="dto">Type du DTO Atendu</param>
+    /// <returns>DTO</returns>
+    /// <remarks>LOUIS Yoann 16/06/2015 Version 1.0.1</remarks>
+    public static TIn DeserializeXml<TIn>(string pXml)
         {
             try
             {

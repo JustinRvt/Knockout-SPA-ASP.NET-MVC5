@@ -58,6 +58,34 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseMetier.cs" />
+    <Compile Include="Entities\AuthentificationMetier.cs" />
+    <Compile Include="Entities\BlocageMetier.cs" />
+    <Compile Include="Entities\CauseMetier.cs" />
+    <Compile Include="Entities\ClientMetier.cs" />
+    <Compile Include="Entities\CodeAffaireMetier.cs" />
+    <Compile Include="Entities\CodeContratMetier.cs" />
+    <Compile Include="Entities\CommentaireMetier.cs" />
+    <Compile Include="Entities\ComposantMetier.cs" />
+    <Compile Include="Entities\DetailTypeMetier.cs" />
+    <Compile Include="Entities\GroupeMetier.cs" />
+    <Compile Include="Entities\HoraireJourMetier.cs" />
+    <Compile Include="Entities\HoraireUserMetier.cs" />
+    <Compile Include="Entities\KeyWordMetier.cs" />
+    <Compile Include="Entities\MAJTIcketMetier.cs" />
+    <Compile Include="Entities\ProjetMetier.cs" />
+    <Compile Include="Entities\RaisonMetier.cs" />
+    <Compile Include="Entities\ResolutionMetier.cs" />
+    <Compile Include="Entities\RestrictionMetier.cs" />
+    <Compile Include="Entities\SousTacheMetier.cs" />
+    <Compile Include="Entities\StatutMetier.cs" />
+    <Compile Include="Entities\StatutProgressMetier.cs" />
+    <Compile Include="Entities\TacheMetier.cs" />
+    <Compile Include="Entities\TicketLienMetier.cs" />
+    <Compile Include="Entities\TicketMetier.cs" />
+    <Compile Include="Entities\TimeGemAccesMetier.cs" />
+    <Compile Include="Entities\TimeTrackingMetier.cs" />
+    <Compile Include="Entities\TimeTypeMetier.cs" />
+    <Compile Include="Entities\VersionMetier.cs" />
     <Compile Include="Helper\CLogger.cs" />
     <Compile Include="IBaseMetier.cs" />
     <Compile Include="Metier\Customer\CustomerMetier.cs" />
@@ -76,6 +104,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\API_GeminiLibrary\API_GeminiLibrary.csproj">
+      <Project>{9cda1fad-b809-40d7-90ae-c4aa7e07dfd1}</Project>
+      <Name>API_GeminiLibrary</Name>
+    </ProjectReference>
     <ProjectReference Include="..\WS_Hotline.DataAccessLayer\DataAccessLayer.csproj">
       <Project>{5b430d82-5023-4325-8147-11616e3beecc}</Project>
       <Name>DataAccessLayer</Name>

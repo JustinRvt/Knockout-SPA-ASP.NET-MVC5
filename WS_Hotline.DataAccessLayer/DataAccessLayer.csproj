@@ -42,6 +42,8 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -49,13 +51,33 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BDD\HotlineDbContext.cs" />
+    <Compile Include="DAL_Cause.cs" />
+    <Compile Include="DAL_Client.cs" />
+    <Compile Include="DAL_CodeAffaire.cs" />
+    <Compile Include="DAL_CodeContrat.cs" />
+    <Compile Include="DAL_DetailType.cs" />
+    <Compile Include="DAL_HoraireJour.cs" />
+    <Compile Include="DAL_HoraireUser.cs" />
+    <Compile Include="DAL_KeyWord.cs" />
+    <Compile Include="DAL_Projet.cs" />
+    <Compile Include="DAL_Raison.cs" />
+    <Compile Include="DAL_Restriction.cs" />
+    <Compile Include="DAL_SousTache.cs" />
+    <Compile Include="DAL_Statut.cs" />
+    <Compile Include="DAL_StatutProgress.cs" />
+    <Compile Include="DAL_Tache.cs" />
+    <Compile Include="DAL_Ticket.cs" />
+    <Compile Include="DAL_TicketLien.cs" />
+    <Compile Include="DAL_TimeGemAcces.cs" />
+    <Compile Include="DAL_TimeTracking.cs" />
+    <Compile Include="DAL_TimeType.cs" />
     <Compile Include="Entities\Customer\CustomerConfiguration.cs" />
     <Compile Include="Entities\Customer\CustomerDAL.cs" />
     <Compile Include="Entities\Softlog\SoftlogConfiguration.cs" />
     <Compile Include="Entities\Softlog\SoftlogDAL.cs" />
     <Compile Include="Entities\User\UserConfiguration.cs" />
     <Compile Include="Entities\User\UserDAL.cs" />
+    <Compile Include="IServiceDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -63,6 +85,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\API_GeminiLibrary\API_GeminiLibrary.csproj">
+      <Project>{9cda1fad-b809-40d7-90ae-c4aa7e07dfd1}</Project>
+      <Name>API_GeminiLibrary</Name>
+    </ProjectReference>
     <ProjectReference Include="..\WS_Hotline.DTOLibrary\DTOLibrary.csproj">
       <Project>{7cd234ca-43b2-49f1-9be4-de8f298232f4}</Project>
       <Name>DTOLibrary</Name>
@@ -74,6 +100,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Function\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

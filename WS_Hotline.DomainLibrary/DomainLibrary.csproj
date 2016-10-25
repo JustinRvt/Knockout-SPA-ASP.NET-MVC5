@@ -50,6 +50,8 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -64,8 +66,21 @@
     <Compile Include="Metier\Softlog\SoftlogMetier.cs" />
     <Compile Include="Metier\User\UserMetier.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Provider\TimeGemProvider.cs" />
+    <Compile Include="Service References\ServiceTimeGem\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Service References\ServiceTimeGem\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ServiceTimeGem\configuration.svcinfo" />
+    <None Include="Service References\ServiceTimeGem\configuration91.svcinfo" />
+    <None Include="Service References\ServiceTimeGem\ServiceTimeGem.disco" />
     <None Include="App.config" />
     <Content Include="NLog.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -74,6 +89,151 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="packages.config" />
+    <None Include="Service References\ServiceTimeGem\ServiceTimeGem.wsdl" />
+    <None Include="Service References\ServiceTimeGem\ServiceTimeGem.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceTimeGem\ServiceTimeGem1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceTimeGem\ServiceTimeGem10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceTimeGem\ServiceTimeGem11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceTimeGem\ServiceTimeGem12.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceTimeGem\ServiceTimeGem13.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceTimeGem\ServiceTimeGem14.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceTimeGem\ServiceTimeGem15.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceTimeGem\ServiceTimeGem16.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceTimeGem\ServiceTimeGem17.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceTimeGem\ServiceTimeGem18.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceTimeGem\ServiceTimeGem19.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceTimeGem\ServiceTimeGem2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceTimeGem\ServiceTimeGem20.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceTimeGem\ServiceTimeGem21.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceTimeGem\ServiceTimeGem22.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceTimeGem\ServiceTimeGem23.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceTimeGem\ServiceTimeGem24.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceTimeGem\ServiceTimeGem25.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceTimeGem\ServiceTimeGem26.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceTimeGem\ServiceTimeGem27.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceTimeGem\ServiceTimeGem28.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceTimeGem\ServiceTimeGem29.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceTimeGem\ServiceTimeGem3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceTimeGem\ServiceTimeGem30.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceTimeGem\ServiceTimeGem31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceTimeGem\ServiceTimeGem32.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceTimeGem\ServiceTimeGem33.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceTimeGem\ServiceTimeGem34.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceTimeGem\ServiceTimeGem35.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceTimeGem\ServiceTimeGem36.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceTimeGem\ServiceTimeGem37.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceTimeGem\ServiceTimeGem38.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceTimeGem\ServiceTimeGem39.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceTimeGem\ServiceTimeGem4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceTimeGem\ServiceTimeGem40.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceTimeGem\ServiceTimeGem41.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceTimeGem\ServiceTimeGem42.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceTimeGem\ServiceTimeGem43.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceTimeGem\ServiceTimeGem44.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceTimeGem\ServiceTimeGem45.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceTimeGem\ServiceTimeGem46.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceTimeGem\ServiceTimeGem5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceTimeGem\ServiceTimeGem6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceTimeGem\ServiceTimeGem7.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceTimeGem\ServiceTimeGem8.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceTimeGem\ServiceTimeGem9.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceTimeGem\WS_Hotline.DomainLibrary.ServiceTimeGem.SerialDataObjet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WS_Hotline.DataAccessLayer\DataAccessLayer.csproj">
@@ -89,7 +249,12 @@
       <Name>Framework</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ServiceTimeGem\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

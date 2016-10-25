@@ -1,6 +1,0 @@
-C:\Tortoise Local\Dev-WS_Hotline\WS_Hotline.Front-End\obj\Debug\Front-End.csprojResolveAssemblyReference.cache
-C:\Tortoise Local\Dev-WS_Hotline\WS_Hotline.Front-End\bin\WS_Hotline.Front-End.dll
-C:\Tortoise Local\Dev-WS_Hotline\WS_Hotline.Front-End\bin\WS_Hotline.Front-End.pdb
-C:\Tortoise Local\Dev-WS_Hotline\WS_Hotline.Front-End\obj\Debug\WS_Hotline.Front-End.dll
-C:\Tortoise Local\Dev-WS_Hotline\WS_Hotline.Front-End\obj\Debug\WS_Hotline.Front-End.pdb
-C:\Tortoise Local\Dev-WS_Hotline\WS_Hotline.Front-End\bin\WS_Hotline.Front-End.dll.config

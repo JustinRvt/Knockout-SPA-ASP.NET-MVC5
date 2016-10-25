@@ -6,6 +6,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WS_Hotline.DTOLibrary.Info;
+using WS_Hotline.Framework.AccesDonnees;
+using WS_Hotline.DomainLibrary.ServiceTimeGem;
 
 namespace WS_Hotline.DomainLibrary.Metier.User
 {
@@ -16,14 +19,31 @@ namespace WS_Hotline.DomainLibrary.Metier.User
     public class UserMetier : BaseMetier<UserDAL, UserDTO, CritereUserDTO,UserException>
     {
 
-		#region Validation
+    public override IBaseDTO GetItem(InfoSessionDTO pInfoSession, IBaseDTO pCritere)
+    {
+      var lProvider = new Provider.TimeGemProvider();
 
-        /// <summary>
-        /// Validation de la User
-        /// </summary>
-        /// <param name="pEntity">Entité a valider</param>
-        /// <remarks>ylouis - 11/07/2016 - Généré par Template T4 v1.0</remarks>
-        public override void ValidatedDTO(Framework.AccesDonnees.IBaseDTO pEntity)
+      var lCurrentAuth = new AuthentificationDTO() { Login = "", Password = "", Proxy = "", Url = "" };
+
+      var lTemp = lProvider.ExecuteFunction<AuthentificationDTO, string>(lCurrentAuth, new MethodDTO()
+      {
+        NomMethode = "GetUtilisateurGemini",
+        Parametrage = lCurrentAuth
+      });
+
+     
+
+      return new UserDTO();
+    }
+
+    #region Validation
+
+    /// <summary>
+    /// Validation de la User
+    /// </summary>
+    /// <param name="pEntity">Entité a valider</param>
+    /// <remarks>ylouis - 11/07/2016 - Généré par Template T4 v1.0</remarks>
+    public override void ValidatedDTO(Framework.AccesDonnees.IBaseDTO pEntity)
         {
             try
             {

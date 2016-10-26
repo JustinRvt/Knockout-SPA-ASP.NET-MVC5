@@ -61,7 +61,6 @@ C:\Tortoise Local\WS_Hotline\WS_Hotline.DataAccessLayer\bin\Debug\fr\System.Web.
 C:\Tortoise Local\WS_Hotline\WS_Hotline.DataAccessLayer\obj\Debug\DataAccessLayer.csprojResolveAssemblyReference.cache
 C:\Tortoise Local\WS_Hotline\WS_Hotline.DataAccessLayer\obj\Debug\WS_Hotline.DataAccessLayer.dll
 C:\Tortoise Local\WS_Hotline\WS_Hotline.DataAccessLayer\obj\Debug\WS_Hotline.DataAccessLayer.pdb
-C:\Tortoise Local\Dev-WS_Hotline\WS_Hotline.DataAccessLayer\obj\Debug\DataAccessLayer.csprojResolveAssemblyReference.cache
 C:\Tortoise Local\Dev-WS_Hotline\WS_Hotline.DataAccessLayer\bin\Debug\WS_Hotline.DataAccessLayer.dll.config
 C:\Tortoise Local\Dev-WS_Hotline\WS_Hotline.DataAccessLayer\bin\Debug\WS_Hotline.DataAccessLayer.dll
 C:\Tortoise Local\Dev-WS_Hotline\WS_Hotline.DataAccessLayer\bin\Debug\WS_Hotline.DataAccessLayer.pdb
@@ -78,7 +77,6 @@ C:\Tortoise Local\Dev-WS_Hotline\WS_Hotline.DataAccessLayer\bin\Debug\System.Web
 C:\Tortoise Local\Dev-WS_Hotline\WS_Hotline.DataAccessLayer\bin\Debug\System.Web.WebPages.dll
 C:\Tortoise Local\Dev-WS_Hotline\WS_Hotline.DataAccessLayer\bin\Debug\Microsoft.Web.Infrastructure.dll
 C:\Tortoise Local\Dev-WS_Hotline\WS_Hotline.DataAccessLayer\bin\Debug\System.Web.WebPages.Deployment.dll
-C:\Tortoise Local\Dev-WS_Hotline\WS_Hotline.DataAccessLayer\bin\Debug\WS_Hotline.DTOLibrary.pdb
 C:\Tortoise Local\Dev-WS_Hotline\WS_Hotline.DataAccessLayer\bin\Debug\WS_Hotline.Framework.pdb
 C:\Tortoise Local\Dev-WS_Hotline\WS_Hotline.DataAccessLayer\bin\Debug\EntityFramework.xml
 C:\Tortoise Local\Dev-WS_Hotline\WS_Hotline.DataAccessLayer\bin\Debug\EntityFramework.SqlServer.xml
@@ -99,5 +97,6 @@ C:\Tortoise Local\Dev-WS_Hotline\WS_Hotline.DataAccessLayer\bin\Debug\fr\System.
 C:\Tortoise Local\Dev-WS_Hotline\WS_Hotline.DataAccessLayer\bin\Debug\fr\System.Web.WebPages.Razor.resources.dll
 C:\Tortoise Local\Dev-WS_Hotline\WS_Hotline.DataAccessLayer\bin\Debug\fr\System.Web.WebPages.resources.dll
 C:\Tortoise Local\Dev-WS_Hotline\WS_Hotline.DataAccessLayer\bin\Debug\fr\System.Web.WebPages.Deployment.resources.dll
+C:\Tortoise Local\Dev-WS_Hotline\WS_Hotline.DataAccessLayer\obj\Debug\DataAccessLayer.csprojResolveAssemblyReference.cache
 C:\Tortoise Local\Dev-WS_Hotline\WS_Hotline.DataAccessLayer\obj\Debug\WS_Hotline.DataAccessLayer.dll
 C:\Tortoise Local\Dev-WS_Hotline\WS_Hotline.DataAccessLayer\obj\Debug\WS_Hotline.DataAccessLayer.pdb

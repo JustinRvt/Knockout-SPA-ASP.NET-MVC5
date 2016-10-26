@@ -60,6 +60,34 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseMetier.cs" />
+    <Compile Include="Entities\AuthentificationMetier.cs" />
+    <Compile Include="Entities\BlocageMetier.cs" />
+    <Compile Include="Entities\CauseMetier.cs" />
+    <Compile Include="Entities\ClientMetier.cs" />
+    <Compile Include="Entities\CodeAffaireMetier.cs" />
+    <Compile Include="Entities\CodeContratMetier.cs" />
+    <Compile Include="Entities\CommentaireMetier.cs" />
+    <Compile Include="Entities\ComposantMetier.cs" />
+    <Compile Include="Entities\DetailTypeMetier.cs" />
+    <Compile Include="Entities\GroupeMetier.cs" />
+    <Compile Include="Entities\HoraireJourMetier.cs" />
+    <Compile Include="Entities\HoraireUserMetier.cs" />
+    <Compile Include="Entities\KeyWordMetier.cs" />
+    <Compile Include="Entities\MAJTIcketMetier.cs" />
+    <Compile Include="Entities\ProjetMetier.cs" />
+    <Compile Include="Entities\RaisonMetier.cs" />
+    <Compile Include="Entities\ResolutionMetier.cs" />
+    <Compile Include="Entities\RestrictionMetier.cs" />
+    <Compile Include="Entities\SousTacheMetier.cs" />
+    <Compile Include="Entities\StatutMetier.cs" />
+    <Compile Include="Entities\StatutProgressMetier.cs" />
+    <Compile Include="Entities\TacheMetier.cs" />
+    <Compile Include="Entities\TicketLienMetier.cs" />
+    <Compile Include="Entities\TicketMetier.cs" />
+    <Compile Include="Entities\TimeGemAccesMetier.cs" />
+    <Compile Include="Entities\TimeTrackingMetier.cs" />
+    <Compile Include="Entities\TimeTypeMetier.cs" />
+    <Compile Include="Entities\VersionMetier.cs" />
     <Compile Include="Helper\CLogger.cs" />
     <Compile Include="IBaseMetier.cs" />
     <Compile Include="Metier\Customer\CustomerMetier.cs" />
